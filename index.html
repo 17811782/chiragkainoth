@@ -537,6 +537,9 @@
     <a class="nav-cta" href="#contact">Contact</a>
   </nav>
   <div class="nav-actions">
+    <a class="cv-nav-btn" href="https://www.linkedin.com/in/chiragkainoth" target="_blank" rel="noopener" aria-label="Chirag Kainoth LinkedIn Profile" style="margin-right:4px">
+      <span>LinkedIn</span>
+    </a>
     <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle CAD Dark and Light Paper theme">
       <span id="themeLabel">CAD Dark</span>
     </button>
@@ -580,18 +583,18 @@
           </p>
           <div class="legend" id="legend">
             <ul>
-              <li><b>A</b><span>38 mm Quartz countertop with mitred drip edge &amp; undermount sink</span></li>
+              <li><b>A</b><span>38 mm Statuario Quartz countertop with mitred waterfall gable &amp; undermount sink</span></li>
               <li><b>B</b><span>Blum Tandembox pull-out soft-close drawer slides &amp; concealed runners</span></li>
               <li><b>C</b><span>18 mm MR-MDF moisture resistant carcass with 1 mm ABS edge-banding</span></li>
-              <li><b>D</b><span>Aventos bi-fold lift-up overhead wall cabinets with 3000K LED channel</span></li>
+              <li><b>D</b><span>Fluted oak joinery fascia with integrated Gola handle profile &amp; LED shelf</span></li>
             </ul>
           </div>
         </div>
         <div class="scrollcue" id="cue"><i></i>Scroll</div>
       </div>
       <div class="hero-stage" id="heroStage">
-        <svg id="cab" viewBox="-700 -2100 1660 3000" role="img" aria-label="3D Isometric modular kitchen structure"></svg>
-        <p class="stage-tag" id="stageTag"><span>&#9679;</span> <b id="stageName" style="font-weight:500">Assembled</b> &middot; Modular Kitchen &middot; 900 &times; 2058 &times; 600 mm</p>
+        <svg id="cab" viewBox="-660 -1620 1800 2580" role="img" aria-label="3D Isometric modular kitchen island joinery structure"></svg>
+        <p class="stage-tag" id="stageTag"><span>&#9679;</span> <b id="stageName" style="font-weight:500">Assembled</b> &middot; Modular Kitchen Island &middot; 1100 &times; 1540 &times; 540 mm</p>
       </div>
     </div>
   </section>
@@ -1002,6 +1005,10 @@
             <a href="tel:+971556901039">+971 55 690 1039</a>
           </div>
           <div class="contact-item">
+            <small>LinkedIn</small>
+            <a href="https://www.linkedin.com/in/chiragkainoth" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline">linkedin.com/in/chiragkainoth</a>
+          </div>
+          <div class="contact-item">
             <small>Location</small>
             <span class="mono" style="font-size:1.05rem;color:var(--ink)">Dubai | Abu Dhabi, United Arab Emirates</span>
           </div>
@@ -1010,6 +1017,7 @@
         <div class="contact-actions">
           <button class="btn" id="copyBtn" type="button">Copy Email</button>
           <a class="btn primary" href="https://wa.me/971556901039" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a class="btn" href="https://www.linkedin.com/in/chiragkainoth" target="_blank" rel="noopener">&#x1F517; LinkedIn Profile</a>
           <a class="btn" href="Chirag_Kainoth_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
         </div>
       </div>
@@ -1020,10 +1028,10 @@
         <div><small>Role</small>Junior Design Manager | Draughtsman</div>
         <div><small>Discipline</small>Joinery Draftsman</div>
         <div><small>Experience</small>4+ Years (UAE &amp; India)</div>
+        <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/chiragkainoth" target="_blank" rel="noopener" style="color:inherit">in/chiragkainoth</a></div>
         <div><small>Clients</small>Emaar, Tilal Al Ghaf, Imtiaz, Private Developers</div>
         <div><small>Based in</small>Dubai | Abu Dhabi, UAE</div>
         <div><small>Software</small>AutoCAD, SketchUp, Lumion</div>
-        <div><small>Languages</small>English, Malayalam, Tamil, Hindi</div>
         <div><small>Scale</small>1:1</div>
         <div><small>Status</small>Open to Opportunities &middot; Rev A</div>
         <div class="full-span"><small>Standard</small>All dimensions in mm &middot; Clash-free MEP &amp; site coordinated</div>
@@ -1094,108 +1102,139 @@ function box(g,b,cls){
 
 const seeded=(()=>{let s=13;return()=>{s=(s*16807)%2147483647;return s/2147483647;};})();
 function grain(g,x0,x1,y0,y1,z){
-  const n=Math.max(4,Math.round((x1-x0)/26));
+  const n=Math.max(4,Math.round((x1-x0)/24));
   for(let i=1;i<n;i++){
-    const x=x0+(x1-x0)*i/n+(seeded()-.5)*8, a=y0+14+seeded()*40, b=y1-14-seeded()*50;
+    const x=x0+(x1-x0)*i/n+(seeded()-.5)*8, a=y0+10+seeded()*30, b=y1-10-seeded()*40;
     el('path',{class:'grain d',d:seg([x,a,z],[x+(seeded()-.5)*6,b,z])},g);
   }
 }
 
-/* Modular Kitchen Dimensions in mm */
-const KW=900, KD=600, KH_BASE=820, KH_TOP=858, KH_SPLASH=1420, KH_WALL=2020;
+function fluting(g,x0,x1,y0,y1,z){
+  const step=16;
+  for(let x=x0+10;x<=x1-10;x+=step){
+    el('path',{class:'ln thin d',d:seg([x,y0,z],[x,y1,z])},g);
+    el('path',{class:'hair d',d:seg([x+3,y0,z],[x+3,y1,z]),style:'opacity:0.35'},g);
+  }
+}
+
+function stoneVeins(g,x0,x1,y,z0,z1){
+  const pts1=[[x0+80,y,z0+40],[x0+260,y,z0+130],[x0+500,y,z0+240],[x0+750,y,z0+380],[x0+980,y,z0+480]];
+  const pts2=[[x0+400,y,z0+70],[x0+600,y,z0+160],[x0+820,y,z0+210],[x0+1040,y,z0+380]];
+  [pts1,pts2].forEach(pts=>{
+    const d='M'+pts.map(p=>P(p[0],p[1],p[2]).map(fmt).join(' ')).join('L');
+    el('path',{class:'hair d',d:d,style:'stroke:var(--ink-2);opacity:0.38'},g);
+  });
+}
+
+function shelfPins(g,x,z,y0,y1){
+  for(let y=y0+60;y<=y1-60;y+=80){
+    const q=P(x,y,z);
+    el('circle',{cx:fmt(q[0]),cy:fmt(q[1]),r:2,class:'hair d',style:'fill:var(--ink-2);opacity:0.6'},g);
+  }
+}
+
+/* Modular Kitchen Island & Architectural Joinery Dimensions in mm */
+const KW=1100, KD=540, KH_PLINTH=90, KH_BASE=850, KH_TOP=888, KH_SHELF_B=1180, KH_SHELF_T=1540;
 const WOOD=['w-top','w-front','w-right'], STONE=['s-top','s-front','s-right'], INK=['fill-ink ln d','fill-ink ln d','fill-ink ln d'];
 const DARK=['d-top','d-front','d-right'];
 
-/* Kitchen Structural Modules */
+/* Detailed Joinery Structural Modules */
 const kitchenParts=[
-  // 1. Plinth / Sub-base (Drops downwards on scroll)
+  // 1. Plinth: Recessed architectural kick-plate sub-base (drops downward)
   {
     id:'plinth',
-    boxes:[[30, 0, 30, KW-30, 100, KD-30]],
-    ex:[0, -200, 0],
+    boxes:[[40, 0, 40, KW-40, KH_PLINTH, KD-40]],
+    ex:[0, -160, 0],
     cls: DARK
   },
-  // 2. Base Carcass: gables, bottom shelf, center divider (shifts backward)
+  // 2. Base Carcass: 18mm MR-MDF gables, divider, bottom shelf, internal shelf (shifts backward)
   {
     id:'carcass',
     boxes:[
-      [0, 100, 0, 18, KH_BASE, KD],             // Left Gable
-      [KW-18, 100, 0, KW, KH_BASE, KD],         // Right Gable
-      [18, 100, 0, KW-18, 118, KD],             // Bottom shelf
-      [440, 118, 0, 458, KH_BASE, KD]           // Center divider
+      [0, KH_PLINTH, 0, 18, KH_BASE, KD],            // Left Gable with 1mm ABS edge
+      [560, KH_PLINTH, 0, 578, KH_BASE, KD],        // Center Divider Mullion
+      [KW-18, KH_PLINTH, 0, KW, KH_BASE, KD],       // Right Gable
+      [18, KH_PLINTH, 0, KW-18, KH_PLINTH+18, KD],  // Bottom Base Shelf
+      [578, 460, 20, KW-18, 478, KD-20]            // Internal Adjustable Shelf
     ],
     ex:[0, 0, -80]
   },
-  // 3. Carcass Back Panel (Rebated back, slides far backward)
+  // 3. Carcass Back: 8mm rebated backing panel (slides far back)
   {
     id:'back',
-    boxes:[[18, 118, 0, KW-18, KH_BASE, 8]],
-    ex:[0, 0, -260]
+    boxes:[[18, KH_PLINTH+18, 0, KW-18, KH_BASE, 10]],
+    ex:[0, 0, -220]
   },
-  // 4. Drawers: 3 soft-close pull-out drawer boxes on left side (slide forward)
+  // 4. Gola Profile: Concealed aluminum handle channels (recessed shadow lines)
+  {
+    id:'gola',
+    boxes:[
+      [10, KH_BASE-38, KD-30, KW-10, KH_BASE-5, KD], // Continuous upper Gola channel
+      [18, 560, KD-30, 560, 580, KD]                 // Mid-tier drawer Gola channel
+    ],
+    cls: DARK,
+    ex:[-30, 0, 140]
+  },
+  // 5. Drawers: 3 Blum Tandembox pull-out tiers on left side (slide forward along runners)
   {
     id:'drawers',
     boxes:[
-      [22, 590, KD, 436, 810, KD+18],           // Top cutlery drawer front
-      [22, 350, KD, 436, 580, KD+18],           // Middle pan drawer front
-      [22, 120, KD, 436, 340, KD+18],           // Bottom deep drawer front
-      [80, 770, KD+18, 380, 785, KD+28],        // Top handle
-      [80, 540, KD+18, 380, 555, KD+28],        // Middle handle
-      [80, 300, KD+18, 380, 315, KD+28]         // Bottom handle
+      [20, 595, KD, 550, KH_BASE-42, KD+18],        // Top cutlery drawer front
+      [20, 360, KD, 550, 555, KD+18],               // Middle pan drawer front
+      [20, KH_PLINTH+20, KD, 550, 345, KD+18],       // Bottom deep pot drawer front
+      [22, 605, 120, 38, 720, KD-10],               // Blum metallic left runner
+      [532, 605, 120, 548, 720, KD-10]              // Blum metallic right runner
     ],
     wood: true,
-    ex:[-100, 0, 320]
+    ex:[-110, 0, 300]
   },
-  // 5. Right Base Unit Door (Under-sink cabinet door, swings/slides right-forward)
+  // 6. Door: Fluted Oak Joinery Door on right cabinet (swings/slides forward-right)
   {
     id:'door',
     boxes:[
-      [462, 120, KD, KW-22, 810, KD+18],        // Door panel
-      [480, 620, KD+18, 495, 780, KD+30]        // Vertical bar handle
+      [584, KH_PLINTH+20, KD, KW-22, KH_BASE-42, KD+18], // Fluted door fascia
+      [605, 680, KD+18, 620, 780, KD+30]                 // Brushed brass minimal bar handle
     ],
     wood: true,
-    ex:[130, 0, 320]
+    fluted: true,
+    ex:[130, 0, 280]
   },
-  // 6. 38mm Quartz Countertop / Worktop (Lifts upward in 3D)
+  // 7. Countertop: 38mm Quartz Countertop with Mitred Waterfall End Gable (lifts upward)
   {
     id:'worktop',
     boxes:[
-      [-10, KH_BASE, -10, KW+10, KH_TOP, KD+20]  // Mitred Quartz Slab
+      [-10, KH_BASE, -10, KW+10, KH_TOP, KD+20],    // Horizontal Quartz Slab
+      [KW+10, 0, -10, KW+48, KH_TOP, KD+20]         // Luxury Waterfall End Gable to floor
     ],
     stone: true,
-    ex:[0, 260, 0]
+    ex:[0, 220, 0]
   },
-  // 7. Undermount Sink Basin & Chrome Mixer Tap (Lifts higher above worktop)
+  // 8. Undermount Sink & Designer Gooseneck Mixer Tap (lifts higher above worktop)
   {
     id:'sink',
     boxes:[
-      [500, KH_BASE-120, 140, 800, KH_TOP+2, 460], // Sink basin
-      [640, KH_TOP, 80, 660, KH_TOP+160, 100],     // Tap vertical mixer column
-      [640, KH_TOP+140, 100, 660, KH_TOP+165, 260] // Tap gooseneck horizontal spout
+      [660, KH_BASE-140, 110, 1010, KH_TOP+2, 450], // Undermount basin
+      [825, KH_TOP, 70, 845, KH_TOP+20, 90],        // Tap cylindrical base
+      [830, KH_TOP+20, 75, 840, KH_TOP+160, 85],    // Vertical mixer column
+      [830, KH_TOP+145, 85, 840, KH_TOP+165, 230],  // Gooseneck spout
+      [840, KH_TOP+50, 60, 860, KH_TOP+85, 80]      // Single-lever mixer handle
     ],
     cls: DARK,
-    ex:[0, 420, 0]
+    ex:[0, 380, 0]
   },
-  // 8. Splashback Panel (running behind worktop)
+  // 9. Floating Wall Shelf: Upper cantilever display shelf with 3000K warm LED channel
   {
-    id:'splash',
+    id:'shelf',
     boxes:[
-      [0, KH_TOP, 0, KW, KH_SPLASH, 18]
-    ],
-    cls: STONE,
-    ex:[0, 0, -180]
-  },
-  // 9. Upper Wall Cabinets: overhead modular cabinets with Aventos lift doors (lifts to ceiling)
-  {
-    id:'wall_cab',
-    boxes:[
-      [0, KH_SPLASH, 0, KW, KH_WALL, 340],             // Overhead carcass
-      [4, KH_SPLASH+6, 340, KW/2-2, KH_WALL-6, 358],   // Left Aventos door
-      [KW/2+2, KH_SPLASH+6, 340, KW-4, KH_WALL-6, 358],// Right Aventos door
-      [20, KH_SPLASH-12, 150, KW-20, KH_SPLASH, 175]   // Concealed LED profile channel
+      [0, KH_SHELF_B, 0, KW, KH_SHELF_T, 20],       // Backing wall panel
+      [0, KH_SHELF_B, 20, KW, KH_SHELF_B+24, 300],  // Bottom display shelf
+      [0, KH_SHELF_T-24, 20, KW, KH_SHELF_T, 300],  // Top canopy shelf
+      [360, KH_SHELF_B+24, 20, 378, KH_SHELF_T-24, 290], // Left mullion divider
+      [730, KH_SHELF_B+24, 20, 748, KH_SHELF_T-24, 290], // Right mullion divider
+      [20, KH_SHELF_B-12, 80, KW-20, KH_SHELF_B, 105]     // Concealed LED channel diffuser
     ],
     wood: true,
-    ex:[0, 560, 0]
+    ex:[0, 460, 0]
   }
 ];
 
@@ -1209,9 +1248,20 @@ window.__buildCabinet=function(svg){
       else if(p.wood && (i===0 || i<3)) box(g,b,WOOD);
       else box(g,b,null);
     });
-    if(p.wood && p.boxes.length>0){
+    if(p.wood && !p.fluted && p.boxes.length>0){
       const b=p.boxes[0];
       grain(g,b[0]+12,b[3]-12,b[1],b[4],b[5]);
+    }
+    if(p.fluted && p.boxes.length>0){
+      const b=p.boxes[0];
+      fluting(g,b[0],b[3],b[1],b[4],b[5]);
+    }
+    if(p.stone && p.boxes.length>0){
+      stoneVeins(g,-10,KW+10,KH_TOP,-10,KD+20);
+    }
+    if(p.id==='carcass'){
+      shelfPins(g,24,140,KH_PLINTH,KH_BASE);
+      shelfPins(g,554,140,KH_PLINTH,KH_BASE);
     }
   });
 
@@ -1228,10 +1278,10 @@ window.__buildCabinet=function(svg){
     t.textContent=label;
   };
   
-  // Kitchen Overall Dimensions
-  dim([0,0,DZ],[KW,0,DZ],'900 WIDTH',30,[0,40],seg([0,0,KD+8],[0,0,DZ+16])+seg([KW,0,KD+8],[KW,0,DZ+16]));
-  dim([DX,0,0],[DX,0,KD],'600 DEPTH',-30,[0,40],seg([KW+8,0,0],[DX+16,0,0])+seg([KW+8,0,KD],[DX+16,0,KD]));
-  dim([DX,0,KD],[DX,KH_WALL,KD],'2058 HEIGHT',-90,[36,0],seg([KW+8,KH_WALL,KD],[DX+16,KH_WALL,KD]));
+  // Kitchen Island Overall CAD Dimensions
+  dim([0,0,DZ],[KW,0,DZ],'1100 WIDTH',30,[0,40],seg([0,0,KD+8],[0,0,DZ+16])+seg([KW,0,KD+8],[KW,0,DZ+16]));
+  dim([DX,0,0],[DX,0,KD],'540 DEPTH',-30,[0,40],seg([KW+8,0,0],[DX+16,0,0])+seg([KW+8,0,KD],[DX+16,0,KD]));
+  dim([DX,0,KD],[DX,KH_SHELF_T,KD],'1540 HEIGHT',-90,[36,0],seg([KW+8,KH_SHELF_T,KD],[DX+16,KH_SHELF_T,KD]));
 
   // Technical Callouts
   const call=(partId,pt,off,letter)=>{
@@ -1243,10 +1293,10 @@ window.__buildCabinet=function(svg){
     t.textContent=letter;
   };
   
-  call('worktop',[KW/2,KH_TOP,KD/2],[130,-90],'A');
-  call('drawers',[220,480,KD+18],[-120,-60],'B');
-  call('carcass',[18,450,KD/2],[-110,60],'C');
-  call('wall_cab',[KW/2,KH_SPLASH+300,340],[140,-80],'D');
+  call('worktop',[KW/2,KH_TOP,KD/2],[140,-90],'A');
+  call('drawers',[280,560,KD+18],[-130,-50],'B');
+  call('carcass',[18,480,KD/2],[-120,60],'C');
+  call('door',[840,480,KD+18],[140,50],'D');
 
   return {root:root,pg:pg,parts:kitchenParts,dims:dimsG,P:P};
 };
@@ -1313,8 +1363,8 @@ function setT(t){cab.parts.forEach(p=>{const o=exOff(p,t);p.g.setAttribute('tran
 const calls=$$('.call',svg);
 
 // Calibrated bounding boxes (t=0 assembled, t=1 exploded)
-const defaultA=[-700,-2100,1660,3000];
-const defaultB=[-980,-2620,2040,3640];
+const defaultA=[-660,-1620,1800,2580];
+const defaultB=[-910,-2080,2120,3100];
 let A=defaultA, B=defaultB;
 
 try {
