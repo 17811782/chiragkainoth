@@ -1,0 +1,1822 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Chirag Kainoth | Junior Design Manager & Joinery Draughtsman</title>
+  <meta name="description" content="Portfolio of Chirag Kainoth — Junior Design Manager & Joinery Draughtsman with 4+ years of experience delivering shop drawings, MEP coordination, modular kitchens, and joinery detailing across leading UAE developers including Emaar, Tilal Al Ghaf, and Imtiaz.">
+  <meta name="author" content="Chirag Kainoth">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+  /* Layout concept: architectural shop drawing set with 3D modular kitchen, interactive tilt, drafting grid, ruler rail, and physical ink stamp */
+  :root{
+    --paper:#E7ECEA; --paper-2:#D9E0DD; --ink:#12181B; --ink-2:#4B575B; --line:rgba(18,24,27,.14); --line-2:rgba(18,24,27,.32);
+    --red:#D2362B; --timber:#A9733A; --accent:#1D5C75; --stone:#8A9A96;
+    --face-top:#F4F7F6; --face-front:#E2E8E6; --face-right:#CBD3D1; 
+    --face-wood:#D9C3A3; --face-wood-r:#BFA47C; --face-wood-t:#E8D6BA;
+    --face-stone:#D0DAD6; --face-stone-r:#BAC5C1; --face-stone-t:#E4ECE9;
+    --face-dark:#3A4549; --face-dark-r:#2D3639; --face-dark-t:#4A565B;
+    --f-display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+    --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --f-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+    --gx:max(16px,env(safe-area-inset-left,0px)); --gr:max(16px,env(safe-area-inset-right,0px));
+  }
+  @media (min-width:1000px){:root{--gx:max(76px,env(safe-area-inset-left,0px))}}
+  
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#0F1416; --paper-2:#171E21; --ink:#E5ECE9; --ink-2:#8F9DA1; --line:rgba(229,236,233,.12); --line-2:rgba(229,236,233,.3);
+      --red:#FF5B4D; --timber:#C98F52; --accent:#4BA4C6; --stone:#56696B;
+      --face-top:#222B2F; --face-front:#192124; --face-right:#11181A; 
+      --face-wood:#6B5233; --face-wood-r:#4E3B24; --face-wood-t:#80633E;
+      --face-stone:#3D4B4F; --face-stone-r:#2B3639; --face-stone-t:#4E5F64;
+      --face-dark:#141A1C; --face-dark-r:#0E1214; --face-dark-t:#1C2326; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0F1416; --paper-2:#171E21; --ink:#E5ECE9; --ink-2:#8F9DA1; --line:rgba(229,236,233,.12); --line-2:rgba(229,236,233,.3);
+    --red:#FF5B4D; --timber:#C98F52; --accent:#4BA4C6; --stone:#56696B;
+    --face-top:#222B2F; --face-front:#192124; --face-right:#11181A; 
+    --face-wood:#6B5233; --face-wood-r:#4E3B24; --face-wood-t:#80633E;
+    --face-stone:#3D4B4F; --face-stone-r:#2B3639; --face-stone-t:#4E5F64;
+    --face-dark:#141A1C; --face-dark-r:#0E1214; --face-dark-t:#1C2326; color-scheme:dark;
+  }
+  :root[data-theme="light"]{
+    --paper:#E7ECEA; --paper-2:#D9E0DD; --ink:#12181B; --ink-2:#4B575B; --line:rgba(18,24,27,.14); --line-2:rgba(18,24,27,.32);
+    --red:#D2362B; --timber:#A9733A; --accent:#1D5C75; --stone:#8A9A96;
+    --face-top:#F4F7F6; --face-front:#E2E8E6; --face-right:#CBD3D1; 
+    --face-wood:#D9C3A3; --face-wood-r:#BFA47C; --face-wood-t:#E8D6BA;
+    --face-stone:#D0DAD6; --face-stone-r:#BAC5C1; --face-stone-t:#E4ECE9;
+    --face-dark:#3A4549; --face-dark-r:#2D3639; --face-dark-t:#4A565B; color-scheme:light;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:auto}
+  body{
+    background:var(--paper);color:var(--ink);
+    font:400 clamp(15px,1.05vw,17px)/1.6 var(--f-body);
+    overflow-x:clip;-webkit-font-smoothing:antialiased;
+    transition:background .35s,color .35s;
+  }
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+  h1,h2,h3,h4,p{margin:0}
+  h1,h2,h3,h4{text-wrap:balance}
+  svg{display:block}
+  img{max-width:100%;height:auto;display:block}
+  .pad{padding-left:var(--gx);padding-right:var(--gr)}
+  .mono{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+  .eyebrow{font:500 .74rem/1.4 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);display:flex;gap:.7rem;align-items:center}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--red)}
+  .disp{font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:.88;letter-spacing:-.005em}
+  .red{color:var(--red)}
+  .badge{display:inline-flex;align-items:center;padding:2px 7px;border:1px solid var(--ink-2);font:500 .64rem/1.2 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+  .badge.client{border-color:var(--red);color:var(--red);background:color-mix(in srgb,var(--red) 8%,transparent)}
+  .badge.imtiaz{border-color:#C98F52;color:#C98F52;background:color-mix(in srgb,#C98F52 8%,transparent)}
+  .badge.brochure{border-color:var(--accent);color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent);transition:all .2s;text-decoration:none}
+  .badge.brochure:hover{background:var(--accent);color:#fff}
+
+  /* Global Sheet section */
+  .sheet{
+    position:relative;
+  }
+
+  /* drawing primitives */
+  .ln{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+  .ln.thin{stroke-width:1;stroke:var(--ink-2)}
+  .ln.hair{stroke-width:.7;stroke:var(--ink-2)}
+  .ln.rd{stroke:var(--red);stroke-width:1.6}
+  .ln.dash{stroke-dasharray:6 5}
+  .txt{font:500 12px var(--f-mono);fill:var(--ink-2);letter-spacing:.06em}
+  .txt.rd{fill:var(--red)}
+  .txt.ink{fill:var(--ink)}
+  .f-top{fill:var(--face-top)}.f-front{fill:var(--face-front)}.f-right{fill:var(--face-right)}
+  .w-top{fill:var(--face-wood-t)}.w-front{fill:var(--face-wood)}.w-right{fill:var(--face-wood-r)}
+  .s-top{fill:var(--face-stone-t)}.s-front{fill:var(--face-stone)}.s-right{fill:var(--face-stone-r)}
+  .d-top{fill:var(--face-dark-t)}.d-front{fill:var(--face-dark)}.d-right{fill:var(--face-dark-r)}
+  .grain{fill:none;stroke:var(--timber);stroke-width:.8;opacity:.55}
+  .fill-ink{fill:var(--ink)}
+  .iso .ln{stroke-width:3.2}.iso .ln.hair{stroke-width:1.6}.iso .grain{stroke-width:1.5}
+
+  /* fixed UI */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:14px;pointer-events:none}
+  .nav>*{pointer-events:auto}
+  .mark{display:flex;align-items:center;gap:.7rem;font:800 1.15rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.04em}
+  .mark-box{width:36px;height:36px;display:grid;place-items:center;border:1.5px solid var(--ink);font-size:.95rem;background:var(--paper);font-weight:900}
+  .mark-sub{display:flex;flex-direction:column;gap:2px}
+  .mark-sub span:first-child{font-family:var(--f-display);font-size:1.15rem;line-height:1}
+  .mark-sub span:last-child{font:500 .62rem/1 var(--f-mono);letter-spacing:.1em;color:var(--ink-2)}
+  
+  .nav-center{
+    display:flex;gap:clamp(.6rem,1.8vw,1.5rem);align-items:center;
+    font:500 .72rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;
+    background:color-mix(in srgb,var(--paper) 80%,transparent);backdrop-filter:blur(8px);
+    padding:.6rem 1rem;border:1px solid var(--line);
+    box-shadow:0 8px 24px -6px rgba(0,0,0,0.06);
+  }
+  .nav-center a{padding:.2rem 0;position:relative}
+  .nav-center a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+  .nav-center a:hover::after,.nav-center a:focus-visible::after{transform:scaleX(1)}
+  .nav-actions{display:flex;gap:.5rem;align-items:center}
+  
+  .theme-btn,.cv-nav-btn{
+    font:500 .68rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;
+    border:1px solid var(--line-2);background:color-mix(in srgb,var(--paper) 85%,transparent);
+    backdrop-filter:blur(8px);padding:.55rem .8rem;cursor:pointer;color:var(--ink);
+    transition:all .25s;display:flex;align-items:center;gap:.4rem;
+  }
+  .theme-btn:hover,.cv-nav-btn:hover{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+  .cv-nav-btn{background:var(--red);border-color:var(--red);color:#fff}
+  .cv-nav-btn:hover{background:color-mix(in srgb,var(--red) 85%,#000);border-color:var(--red);color:#fff}
+  
+  @media (max-width:860px){
+    .nav-center a:not(.nav-cta){display:none}
+    .mark-sub span:last-child{display:none}
+    .cv-nav-btn{display:none}
+  }
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+
+  .rail{position:fixed;left:max(14px,env(safe-area-inset-left,0px));top:84px;bottom:56px;width:22px;z-index:40;display:none;
+    background:repeating-linear-gradient(to bottom,var(--line-2) 0 1px,transparent 1px 10px) right/10px 100% no-repeat,
+               repeating-linear-gradient(to bottom,var(--line-2) 0 1px,transparent 1px 50px) right/18px 100% no-repeat}
+  .rail::after{content:"";position:absolute;right:0;top:0;bottom:0;width:1px;background:var(--line-2)}
+  .rail-fill{position:absolute;right:0;top:0;width:3px;height:0;background:var(--red)}
+  .rail-mark{position:absolute;right:6px;top:0;transform:translateY(-50%);font:500 .62rem/1 var(--f-mono);color:var(--red);background:var(--paper);padding:2px 4px;border:1px solid var(--red);white-space:nowrap}
+  .rail-mark::after{content:"%"}
+  @media (min-width:1000px){.rail{display:block}}
+
+  .hud{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:50;display:grid;grid-template-columns:auto auto;border:1px solid var(--line-2);background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(8px);font:500 .64rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;pointer-events:none}
+  .hud span{padding:.55rem .7rem;border-left:1px solid var(--line-2)}
+  .hud span:first-child{border-left:0;color:var(--ink)}
+  @media (max-width:520px){.hud span:nth-child(3){display:none}}
+
+  .xhair{position:fixed;inset:0;z-index:30;pointer-events:none;opacity:0;transition:opacity .3s}
+  .xhair.on{opacity:1}
+  .xhair i{position:absolute;background:var(--line-2)}
+  .xh-x{left:0;right:0;height:1px;top:0}.xh-y{top:0;bottom:0;width:1px;left:0}
+  .xhair b{position:absolute;top:0;left:0;font:500 .6rem/1 var(--f-mono);color:var(--red);letter-spacing:.08em;white-space:nowrap;padding:3px 5px;background:var(--paper)}
+  @media (hover:none),(max-width:900px){.xhair{display:none}}
+
+  /* hero with 3D modular kitchen structure */
+  .hero{position:relative}
+  .hero-pin{position:relative;height:100vh;height:100svh;overflow:hidden;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:clamp(1rem,3vw,3rem);padding-top:76px;padding-bottom:64px}
+  .grid-bg{position:absolute;inset:0;z-index:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px),linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);background-size:20px 20px,20px 20px,100px 100px,100px 100px;opacity:.55;-webkit-mask-image:radial-gradient(ellipse at 60% 50%,#000 30%,transparent 85%);mask-image:radial-gradient(ellipse at 60% 50%,#000 30%,transparent 85%)}
+  .hero-copy{position:relative;z-index:2;display:grid;gap:1.2rem;align-content:center}
+  .hero h1{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(3.2rem,min(9.5vw,14svh),9.2rem);line-height:.84;letter-spacing:-.01em}
+  .swap{display:grid}.swap>*{grid-area:1/1;align-self:start}
+  .hero h1 .ln1{display:block;overflow:hidden;padding-bottom:.05em}
+  .hero h1 .ln1>span{display:block}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .lede{max-width:46ch;color:var(--ink-2);font-size:clamp(.95rem,1.15vw,1.08rem);line-height:1.55}
+  .legend{display:grid;gap:.5rem;font:400 .76rem/1.4 var(--f-mono);color:var(--ink-2);max-width:48ch;opacity:0}
+  .legend li{display:grid;grid-template-columns:26px 1fr;gap:.7rem;align-items:center;list-style:none}
+  .legend ul{margin:0;padding:0;display:grid;gap:.5rem}
+  .legend b{width:22px;height:22px;border:1.5px solid var(--red);border-radius:50%;display:grid;place-items:center;color:var(--red);font-weight:500;font-size:.7rem}
+  .scrollcue{display:flex;align-items:center;gap:.8rem;font:500 .7rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  .scrollcue i{width:1px;height:38px;background:var(--line-2);position:relative;overflow:hidden}
+  .scrollcue i::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--red);animation:cue 1.8s ease-in-out infinite}
+  @keyframes cue{to{top:110%}}
+  
+  /* 3D Hero Stage Parallax */
+  .hero-stage{
+    position:relative;z-index:1;width:100%;height:100%;
+    min-height:500px;max-height:86vh;
+    display:flex;align-items:center;justify-content:center;
+    perspective:1200px;
+    transform-style:preserve-3d;
+    transition:transform 0.4s cubic-bezier(0.1, 0.9, 0.2, 1);
+  }
+  .hero-stage svg{
+    width:100%;height:100%;max-height:84vh;
+    overflow:visible;display:block;
+  }
+  .stage-tag{
+    position:absolute;left:0;bottom:0;
+    font:500 .68rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);
+    background:color-mix(in srgb,var(--paper) 75%,transparent);
+    padding:5px 9px;border:1px solid var(--line-2);border-radius:3px;
+    backdrop-filter:blur(6px);
+  }
+  .stage-tag span{color:var(--red)}
+  
+  @media (max-width:860px){
+    .hero-pin{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);align-items:start;padding-top:70px;gap:.4rem}
+    .hero h1{font-size:clamp(2.8rem,14vw,5rem)}
+    .hero .lede{display:none}.scrollcue{display:none}
+    .hero-copy{gap:.6rem}
+    .hero-stage{min-height:360px;height:52vh}
+    .legend{font-size:.7rem;gap:.3rem}
+  }
+
+  /* sheet shared */
+  .sheet-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--line-2);padding-bottom:.9rem;margin-bottom:clamp(1.6rem,4vw,3.4rem)}
+  .sheet-head h2{font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:.86;font-size:clamp(2.6rem,7.5vw,7rem)}
+  .sheet-head .eyebrow{margin-bottom:.8rem}
+
+  /* brief / statement */
+  .brief{padding-top:clamp(5rem,12vw,10rem);padding-bottom:clamp(5rem,12vw,10rem)}
+  .brief p{font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:.98;font-size:clamp(1.9rem,5.5vw,5.4rem);max-width:24ch;text-wrap:pretty}
+  .brief .w{display:inline-block;white-space:pre}
+  .brief .w.mk{color:var(--red)}
+  .brief-meta{margin-top:clamp(2rem,5vw,3.5rem);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;max-width:1100px;border-top:1px solid var(--line-2);padding-top:1.4rem}
+  .brief-meta div{display:grid;gap:.3rem}
+  .brief-meta dt{color:var(--ink-2)}
+  .brief-meta dd{margin:0;font-size:.95rem;color:var(--ink);font-weight:500}
+
+  /* work / projects with 3D depth & interactive tilt */
+  .work{padding-top:clamp(4rem,9vw,8rem);padding-bottom:clamp(3rem,8vw,7rem)}
+  .rows{display:grid}
+  
+  .row{
+    position:relative;
+    display:grid;
+    grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1.2fr);
+    gap:clamp(1rem,2.5vw,2.5rem);
+    align-items:center;
+    padding:1.8rem clamp(0.5rem, 1.5vw, 1.5rem);
+    border-top:1px solid var(--line-2);
+    cursor:pointer;
+    perspective:1000px;
+    transform-style:preserve-3d;
+    transition:background .4s, transform .45s cubic-bezier(.2,.8,.2,1);
+    border-radius:4px;
+  }
+  .row:last-child{border-bottom:1px solid var(--line-2)}
+  .row::before{
+    content:"";position:absolute;left:0;top:-1px;height:2px;width:100%;
+    background:var(--red);transform:scaleX(0);transform-origin:left;
+    transition:transform .6s cubic-bezier(.2,.8,.2,1)
+  }
+  .row:hover::before,.row.act::before{transform:scaleX(1)}
+  .row:hover{background:color-mix(in srgb,var(--paper) 70%,var(--paper-2))}
+  
+  .row h3{
+    font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:.88;
+    font-size:clamp(1.8rem,3.8vw,3.6rem);
+    transition:transform .5s cubic-bezier(.2,.8,.2,1), color .35s;
+    transform-style:preserve-3d;
+  }
+  .row:hover h3,.row.act h3{transform:translateX(.6rem) translateZ(15px);color:var(--red)}
+  .row .project-meta-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem;transform-style:preserve-3d}
+  .row .tags{display:grid;gap:.35rem;color:var(--ink-2);transform-style:preserve-3d}
+  .row .tags b{font-weight:600;color:var(--ink)}
+  .row .tags .mono{font-size:.7rem}
+  .row .tag-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-top:.2rem}
+  
+  /* 3D Project Media Container */
+  .project-media-wrap{
+    position:relative;aspect-ratio:16/9;
+    border:1px solid var(--line-2);
+    background:color-mix(in srgb,var(--paper) 70%,var(--paper-2));
+    overflow:hidden;
+    perspective:1000px;
+    transform-style:preserve-3d;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease;
+    box-shadow:0 8px 24px -10px rgba(0,0,0,0.12);
+    border-radius:2px;
+  }
+  .project-media-wrap img{
+    width:100%;height:100%;object-fit:cover;
+    filter:grayscale(20%) contrast(105%);
+    transform-style:preserve-3d;
+    transition:transform .65s cubic-bezier(.2,.8,.2,1), filter .45s;
+  }
+  .row:hover .project-media-wrap{
+    transform:perspective(800px) rotateY(-4deg) rotateX(2deg) scale(1.02) translateZ(15px);
+    box-shadow:0 24px 48px -15px rgba(0,0,0,0.3), 0 0 25px rgba(210,54,43,0.18);
+    border-color:var(--red);
+  }
+  .row:hover .project-media-wrap img{
+    transform:translateZ(26px) scale(1.08);
+    filter:grayscale(0%) contrast(102%);
+  }
+  .project-media-wrap svg{position:absolute;inset:0;width:100%;height:100%}
+  
+  /* 3D Dynamic Specular Glare */
+  .glare-3d{
+    position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 60%);
+    mix-blend-mode:overlay;opacity:0;transition:opacity .35s;z-index:5;
+  }
+  .row:hover .glare-3d, .exp-card:hover .glare-3d{opacity:1}
+  
+  .project-tag-overlay{
+    position:absolute;bottom:8px;left:8px;
+    background:color-mix(in srgb,var(--paper) 90%,transparent);
+    backdrop-filter:blur(6px);padding:4px 9px;
+    font:500 .62rem/1 var(--f-mono);letter-spacing:.08em;
+    color:var(--ink);border:1px solid var(--line-2);pointer-events:none;
+    transform-style:preserve-3d;
+    transition:transform .4s cubic-bezier(.2,.8,.2,1);
+    z-index:6;
+  }
+  .row:hover .project-tag-overlay{transform:translateZ(35px) translateY(-2px)}
+  
+  .project-zoom-btn{
+    position:absolute;top:8px;right:8px;
+    background:color-mix(in srgb,var(--paper) 90%,transparent);
+    border:1px solid var(--line-2);color:var(--ink);
+    width:28px;height:28px;display:grid;place-items:center;
+    font-size:.8rem;font-family:var(--f-mono);pointer-events:none;
+    transform-style:preserve-3d;
+    transition:background .25s, color .25s, transform .4s cubic-bezier(.2,.8,.2,1);
+    z-index:6;
+  }
+  .row:hover .project-zoom-btn{
+    background:var(--red);color:#fff;border-color:var(--red);
+    transform:translateZ(42px) scale(1.1);
+  }
+  
+  @media (max-width:860px){
+    .row{grid-template-columns:minmax(0,1fr);gap:1rem}
+    .row h3{font-size:clamp(2rem,9vw,2.8rem)}
+    .project-media-wrap{max-height:240px}
+  }
+
+  /* experience section with 3D cards */
+  .experience{padding-top:clamp(4rem,9vw,8rem);padding-bottom:clamp(3rem,8vw,7rem)}
+  .exp-timeline{display:grid;gap:clamp(1.5rem,3vw,3rem);margin-top:clamp(1.5rem,3vw,2.5rem)}
+  
+  .exp-card{
+    border:1px solid var(--line-2);
+    background:color-mix(in srgb,var(--paper) 80%,var(--paper-2));
+    padding:clamp(1.2rem,3vw,2.2rem);
+    position:relative;display:grid;gap:1.2rem;
+    perspective:1000px;
+    transform-style:preserve-3d;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease, border-color .35s;
+    box-shadow:0 8px 24px -10px rgba(0,0,0,0.08);
+    border-radius:3px;
+  }
+  .exp-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);border-radius:3px 0 0 3px}
+  .exp-card:hover{
+    transform:perspective(1000px) translateY(-6px) rotateX(1.8deg) translateZ(10px);
+    box-shadow:0 25px 50px -15px rgba(0,0,0,0.16), 0 0 25px rgba(210,54,43,0.1);
+    border-color:var(--line);
+  }
+  
+  .exp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;transform-style:preserve-3d}
+  .exp-company{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:.95}
+  .exp-role{font:600 1rem/1.4 var(--f-body);color:var(--red);margin-top:.3rem}
+  .exp-date{font:500 .75rem/1.2 var(--f-mono);letter-spacing:.1em;border:1px solid var(--line-2);padding:.4rem .7rem;color:var(--ink-2);background:var(--paper)}
+  .exp-bullets{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.8rem 1.6rem;padding:0;margin:0;list-style:none;transform-style:preserve-3d}
+  .exp-bullets li{position:relative;padding-left:1.2rem;font-size:.92rem;color:var(--ink-2);line-height:1.5}
+  .exp-bullets li::before{content:"▸";position:absolute;left:0;top:0;color:var(--red);font-weight:bold}
+  .exp-clients{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;padding-top:.8rem;border-top:1px dashed var(--line-2);font:500 .72rem/1 var(--f-mono);letter-spacing:.08em}
+  .exp-clients strong{color:var(--ink)}
+
+  /* capability */
+  .cap{padding-top:clamp(3rem,7vw,6rem);padding-bottom:clamp(3rem,7vw,6rem);overflow:hidden}
+  .marq{display:flex;gap:0;width:max-content;will-change:transform;font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:1;font-size:clamp(3rem,9vw,9rem);white-space:nowrap;transform-style:preserve-3d}
+  .marq span{padding-right:.35em}
+  .marq span:nth-child(even){color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+  .marq.alt span:nth-child(even){-webkit-text-stroke:0;color:var(--red)}
+  .marq.alt span:nth-child(odd){color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+  
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:clamp(2.4rem,6vw,5rem);border-top:1px solid var(--line-2)}
+  .stat{
+    padding:1.3rem 1rem 1.3rem 0;display:grid;gap:.4rem;
+    border-right:1px solid var(--line);
+    transform-style:preserve-3d;
+    transition:transform .4s ease;
+  }
+  .stat:hover{transform:translateY(-4px) translateZ(8px)}
+  .stat:last-child{border-right:0}
+  .stat strong{font:900 clamp(2.6rem,6vw,5.4rem)/.9 var(--f-display);text-transform:uppercase;font-variant-numeric:tabular-nums}
+  .stat>span{color:var(--ink-2);font-size:.88rem;max-width:24ch}
+  @media (max-width:640px){.stat{border-right:0;border-bottom:1px solid var(--line)}}
+
+  /* skills pills matrix */
+  .skills-matrix{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem;border-top:1px solid var(--line-2);padding-top:2rem}
+  .skills-group{display:grid;gap:.8rem}
+  .skills-group h4{font:500 .75rem/1.2 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+  .skills-list{display:flex;flex-wrap:wrap;gap:.5rem}
+  .skill-pill{
+    font:500 .75rem/1.2 var(--f-mono);padding:.4rem .7rem;
+    border:1px solid var(--line-2);background:color-mix(in srgb,var(--paper) 60%,transparent);
+    color:var(--ink);display:inline-flex;align-items:center;gap:.4rem;
+    transition:transform .3s ease, border-color .3s, background .3s;
+  }
+  .skill-pill:hover{transform:translateY(-2px);border-color:var(--ink)}
+  .skill-pill.core{border-color:var(--red);color:var(--red);background:color-mix(in srgb,var(--red) 5%,transparent)}
+  .skill-pill.core:hover{background:color-mix(in srgb,var(--red) 12%,transparent)}
+
+  /* contact & physical ink stamping */
+  .contact{position:relative;padding-top:clamp(5rem,12vw,10rem);padding-bottom:calc(clamp(5rem,10vw,8rem) + 40px);overflow:hidden}
+  .contact h2{font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:.82;font-size:clamp(3.4rem,13vw,13rem);max-width:14ch;transform-style:preserve-3d}
+  
+  .stamp-container{
+    position:absolute;right:max(var(--gr),4vw);top:clamp(5rem,12vw,9rem);
+    width:clamp(170px,25vw,340px);aspect-ratio:1.5;
+    pointer-events:none;z-index:20;
+  }
+  .stamp{
+    width:100%;height:100%;
+    border:4px double var(--red);color:var(--red);
+    display:grid;place-items:center;text-align:center;
+    font:900 clamp(1rem,2.1vw,1.8rem)/1.05 var(--f-display);
+    letter-spacing:.04em;text-transform:uppercase;
+    transform:rotate(-9deg);
+    background:color-mix(in srgb,var(--paper) 65%,transparent);
+    padding:.6rem;box-shadow:0 10px 25px rgba(210,54,43,0.15);
+    position:relative;transform-origin:center center;
+  }
+  .stamp small{display:block;font:500 clamp(.52rem,.8vw,.7rem)/1.4 var(--f-mono);letter-spacing:.14em;margin-top:.4rem}
+  .stamp-shockwave{
+    position:absolute;inset:-10px;
+    border:2.5px solid var(--red);border-radius:4px;
+    opacity:0;pointer-events:none;transform-origin:center center;
+  }
+  
+  .contact-grid{margin-top:clamp(2.4rem,6vw,5rem);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,4rem);align-items:start}
+  .contact-details{display:grid;gap:1.5rem}
+  .contact-links{display:flex;flex-direction:column;gap:.8rem}
+  .contact-item{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+  .contact-item small{font:500 .65rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);min-width:70px}
+  .contact-item a,.contact-item code{font:500 clamp(1rem,2vw,1.5rem)/1.2 var(--f-mono);border-bottom:1.5px solid var(--red);padding-bottom:.15rem;color:var(--ink)}
+  
+  .contact-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
+  .btn{font:500 .72rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:.8rem 1.2rem;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem;text-decoration:none}
+  .btn:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+  .btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+  .btn.primary:hover{background:color-mix(in srgb,var(--red) 85%,#000);border-color:var(--red);color:#fff}
+  
+  .titleblock{
+    display:grid;grid-template-columns:1fr 1fr;
+    border:1px solid var(--ink);font-size:.85rem;
+    transform-style:preserve-3d;
+    box-shadow:0 12px 30px -10px rgba(0,0,0,0.1);
+    transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  }
+  .titleblock:hover{transform:perspective(900px) rotateY(-2deg) rotateX(2deg) translateZ(8px)}
+  .titleblock div{padding:.7rem .8rem;border-bottom:1px solid var(--line-2);border-right:1px solid var(--line-2);display:grid;gap:.15rem;min-width:0}
+  .titleblock div:nth-child(2n){border-right:0}
+  .titleblock div:nth-last-child(-n+2){border-bottom:0}
+  .titleblock small{font:500 .6rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  .titleblock .full-span{grid-column:1/-1;border-right:0}
+  .foot{margin-top:clamp(3rem,7vw,6rem);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--ink-2);border-top:1px solid var(--line-2);padding-top:1rem}
+  
+  @media (max-width:860px){
+    .contact-grid{grid-template-columns:minmax(0,1fr)}
+    .stamp-container{position:relative;right:auto;top:auto;margin-top:1.6rem}
+  }
+
+  /* 3D Project Lightbox Modal with spatial unfold */
+  .modal-backdrop{
+    position:fixed;inset:0;
+    background:rgba(15,20,22,.86);
+    backdrop-filter:blur(10px);
+    z-index:90;display:flex;align-items:center;justify-content:center;
+    padding:1.5rem;opacity:0;pointer-events:none;
+    perspective:1200px;
+    transition:opacity .35s ease;
+  }
+  .modal-backdrop.open{opacity:1;pointer-events:auto}
+  
+  .modal-card{
+    background:var(--paper);border:1px solid var(--line-2);
+    width:min(920px,100%);max-height:90vh;overflow-y:auto;
+    display:grid;position:relative;
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+    transform:perspective(1200px) rotateX(-16deg) scale(0.92) translateZ(-60px);
+    opacity:0;
+    transition:transform .45s cubic-bezier(0.2, 0.9, 0.2, 1.05), opacity .35s ease;
+    will-change:transform, opacity;
+  }
+  .modal-backdrop.open .modal-card{
+    transform:perspective(1200px) rotateX(0deg) scale(1) translateZ(0);
+    opacity:1;
+  }
+  
+  .modal-close{position:absolute;top:14px;right:14px;z-index:10;width:34px;height:34px;border:1px solid var(--line-2);background:var(--paper);color:var(--ink);font:600 1rem/1 var(--f-mono);cursor:pointer;display:grid;place-items:center}
+  .modal-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
+  .modal-img-wrap{aspect-ratio:16/9;background:#000;position:relative;overflow:hidden}
+  .modal-img-wrap img{width:100%;height:100%;object-fit:cover}
+  .modal-content{padding:1.6rem 2rem;display:grid;gap:1.2rem}
+  .modal-title-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.8rem;border-bottom:1px solid var(--line-2);padding-bottom:.8rem}
+  .modal-title-row h3{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:2.2rem;line-height:.95}
+  .modal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;font-size:.9rem}
+  .modal-grid div{display:grid;gap:.2rem}
+  .modal-grid small{font:500 .65rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+  .modal-actions{display:flex;gap:.8rem;flex-wrap:wrap;padding-top:.8rem;border-top:1px solid var(--line-2)}
+
+  @media (prefers-reduced-motion:reduce){
+    .scrollcue i::after{animation:none}
+    .modal-card{transform:none !important}
+    .row:hover .project-media-wrap{transform:none !important}
+  }
+  </style>
+</head>
+
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="currentColor" stroke-width="1" opacity=".55"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- FIXED HEADER & NAVIGATION -->
+<header class="nav pad">
+  <a class="mark" href="#top" aria-label="Chirag Kainoth - Home">
+    <span class="mark-box">CK</span>
+    <div class="mark-sub">
+      <span>Chirag Kainoth</span>
+      <span>Junior Design Manager | Draughtsman</span>
+    </div>
+  </a>
+  <nav class="nav-center" aria-label="Primary Navigation">
+    <a href="#work">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#capability">Capabilities</a>
+    <a class="nav-cta" href="#contact">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle CAD Dark and Light Paper theme">
+      <span id="themeLabel">CAD Dark</span>
+    </button>
+    <a class="cv-nav-btn" href="Chirag_Kainoth_CV.pdf" target="_blank" rel="noopener">
+      <span>CV (PDF)</span>
+    </a>
+  </div>
+</header>
+
+<div class="rail" aria-hidden="true">
+  <div class="rail-fill" id="railFill"></div>
+  <div class="rail-mark" id="railMark"><span id="railPct">0</span></div>
+</div>
+
+<div class="hud" aria-hidden="true">
+  <span id="hudName">Cover</span>
+  <span id="hudScale">1:10</span>
+</div>
+
+<div class="xhair" id="xhair" aria-hidden="true">
+  <i class="xh-x"></i><i class="xh-y"></i>
+  <b id="xhRead">X 0000 Y 0000</b>
+</div>
+
+<main>
+  <!-- SHEET 01 : COVER (3D MODULAR KITCHEN STRUCTURE) -->
+  <section class="hero sheet" id="top" data-sheet="Cover" data-scale="1:10">
+    <div class="hero-pin pad">
+      <div class="grid-bg" id="gridBg"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Junior Design Manager &middot; Joinery Draughtsman &middot; Dubai, UAE</p>
+        <h1 aria-label="Drawn before it's built.">
+          <span class="ln1"><span>Drawn</span></span>
+          <span class="ln1"><span>before</span></span>
+          <span class="ln1"><span>it&rsquo;s</span></span>
+          <span class="ln1"><span><em>built.</em></span></span>
+        </h1>
+        <div class="swap">
+          <p class="lede" id="lede">
+            Draughtsman &amp; Junior Design Manager with 4+ years delivering shop drawings, production sets, and MEP coordination for luxury residential joinery and modular kitchens across premier UAE developers (Emaar, Tilal Al Ghaf, Imtiaz).
+          </p>
+          <div class="legend" id="legend">
+            <ul>
+              <li><b>A</b><span>38 mm Quartz countertop with mitred drip edge &amp; undermount sink</span></li>
+              <li><b>B</b><span>Blum Tandembox pull-out soft-close drawer slides &amp; concealed runners</span></li>
+              <li><b>C</b><span>18 mm MR-MDF moisture resistant carcass with 1 mm ABS edge-banding</span></li>
+              <li><b>D</b><span>Aventos bi-fold lift-up overhead wall cabinets with 3000K LED channel</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="scrollcue" id="cue"><i></i>Scroll</div>
+      </div>
+      <div class="hero-stage" id="heroStage">
+        <svg id="cab" viewBox="-700 -2100 1660 3000" role="img" aria-label="3D Isometric modular kitchen structure"></svg>
+        <p class="stage-tag" id="stageTag"><span>&#9679;</span> <b id="stageName" style="font-weight:500">Assembled</b> &middot; Modular Kitchen &middot; 900 &times; 2058 &times; 600 mm</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHEET 02 : WORK (PROJECTS) -->
+  <section class="work sheet pad" id="work" data-sheet="Projects" data-scale="1:50">
+    <div class="sheet-head">
+      <div>
+        <p class="eyebrow">UAE Developer Project Portfolio</p>
+        <h2>Projects</h2>
+      </div>
+      <p class="mono" style="color:var(--ink-2)">8 Key Projects &middot; Emaar, Tilal Al Ghaf &amp; Imtiaz &middot; Click to inspect in 3D</p>
+    </div>
+    
+    <div class="rows" id="rows">
+      
+      <!-- 1. COTIER HOUSE 1 (IMTIAZ) -->
+      <article class="row" data-cols="5" data-rows="3" data-kind="wardrobe" data-project="cotier-house">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge imtiaz">Imtiaz Developments</span>
+            <span class="mono">Dubai Islands</span>
+          </div>
+          <h3>Cotier House 1</h3>
+        </div>
+        <div class="tags">
+          <b>Kitchen &amp; Wardrobe Works</b>
+          <span class="mono">34 Sheets &middot; 1:20 Setting Out to 1:1 CNC Profiles</span>
+          <span>Luxury waterfront residential kitchen casework, quartz waterfall islands, master dressing suites &amp; vanity units.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="https://imtiaz.ae/property/cotier-house-by-imtiaz" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F310; Official Project Page</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/cotier-house.jpg" alt="Cotier House by Imtiaz - Kitchen &amp; Wardrobe Works" loading="lazy">
+          <span class="project-tag-overlay mono">Imtiaz &middot; Kitchen &amp; Wardrobe</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+      <!-- 2. GOLF HEIGHTS -->
+      <article class="row" data-cols="5" data-rows="3" data-kind="wardrobe" data-project="golf-heights">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge client">Emaar</span>
+            <span class="mono">Emirates Living, Dubai</span>
+          </div>
+          <h3>Golf Heights</h3>
+        </div>
+        <div class="tags">
+          <b>Joinery Works</b>
+          <span class="mono">42 Sheets &middot; 1:20 to 1:1 Details</span>
+          <span>Bespoke master wardrobes, bathroom vanity joinery, integrated LED channels, veneer panelling.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="brochures/golf-heights-brochure.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F4D6; Official Brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/golf-heights.jpg" alt="Golf Heights by Emaar - Joinery Works" loading="lazy">
+          <span class="project-tag-overlay mono">Emaar &middot; Joinery</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+      <!-- 3. SUNRIDGE -->
+      <article class="row" data-cols="4" data-rows="2" data-kind="wardrobe" data-project="sunridge">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge client">Emaar</span>
+            <span class="mono">Rashid Yachts &amp; Marina</span>
+          </div>
+          <h3>Sunridge</h3>
+        </div>
+        <div class="tags">
+          <b>Joinery Works</b>
+          <span class="mono">48 Sheets &middot; 1:20 to 1:2</span>
+          <span>Luxury waterfront residential cabinetry, walk-in closets, vanity counters &amp; acoustic panelling.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="brochures/sunridge-brochure.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F4D6; Official Brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/sunridge.jpg" alt="Sunridge at Rashid Yachts and Marina by Emaar - Joinery Works" loading="lazy">
+          <span class="project-tag-overlay mono">Emaar &middot; Marina Joinery</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+      <!-- 4. AURA GARDENS -->
+      <article class="row" data-cols="6" data-rows="4" data-kind="shelf" data-project="aura-gardens">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge client" style="border-color:#C98F52;color:#C98F52">Tilal Al Ghaf</span>
+            <span class="mono">Dubai</span>
+          </div>
+          <h3>Aura Gardens</h3>
+        </div>
+        <div class="tags">
+          <b>Joinery Works</b>
+          <span class="mono">36 Sheets &middot; 1:20 to 1:1</span>
+          <span>High-end villa joinery, custom storage units, architectural millwork, fine timber detailing.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="brochures/aura-gardens-brochure.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F4D6; Official Brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/aura-gardens.jpg" alt="Aura Gardens by Tilal Al Ghaf - Joinery Works" loading="lazy">
+          <span class="project-tag-overlay mono">Tilal Al Ghaf &middot; Luxury Villas</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+      <!-- 5. SEASCAPE -->
+      <article class="row" data-cols="4" data-rows="1" data-kind="desk" data-project="seascape">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge client">Emaar</span>
+            <span class="mono">Rashid Yachts &amp; Marina</span>
+          </div>
+          <h3>Seascape</h3>
+        </div>
+        <div class="tags">
+          <b>Joinery Works</b>
+          <span class="mono">38 Sheets &middot; 1:20 to 1:2</span>
+          <span>Maritime luxury apartments, contemporary veneer wardrobes, master dressers, MEP integration.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="brochures/seascape-brochure.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F4D6; Official Brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/seascape.jpg" alt="Seascape by Emaar - Joinery Works" loading="lazy">
+          <span class="project-tag-overlay mono">Emaar &middot; Joinery</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+      <!-- 6. FAIRWAY VILLAS -->
+      <article class="row" data-cols="4" data-rows="2" data-kind="bar" data-project="fairway-villas">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge client">Emaar South</span>
+            <span class="mono">Dubai South</span>
+          </div>
+          <h3>Fairway Villas</h3>
+        </div>
+        <div class="tags">
+          <b>Kitchen Works</b>
+          <span class="mono">28 Sheets &middot; 1:10 to 1:2</span>
+          <span>Golf community villas, comprehensive kitchen casework, stone worktops, appliance coordination.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="brochures/fairway-villas-brochure.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F4D6; Official Brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/fairway-villas.jpg" alt="Fairway Villas by Emaar South - Kitchen Works" loading="lazy">
+          <span class="project-tag-overlay mono">Emaar South &middot; Kitchens</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+      <!-- 7. PALACE RESIDENCE -->
+      <article class="row" data-cols="5" data-rows="2" data-kind="bar" data-project="palace-residence">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge client">Emaar</span>
+            <span class="mono">Dubai Creek Harbour</span>
+          </div>
+          <h3>Palace Residence</h3>
+        </div>
+        <div class="tags">
+          <b>Kitchen Works</b>
+          <span class="mono">32 Sheets &middot; 1:10 to 1:2</span>
+          <span>Hospitality-grade residential kitchens, MR-MDF moisture resistant carcass, hardware schedules.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="brochures/creek-palace-brochure.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F4D6; Official Brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/palace-residence.jpg" alt="Palace Residences North by Emaar - Kitchen Works" loading="lazy">
+          <span class="project-tag-overlay mono">Emaar &middot; Kitchen Casework</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+      <!-- 8. BAYVIEW -->
+      <article class="row" data-cols="5" data-rows="3" data-kind="wardrobe" data-project="bayview">
+        <div class="glare-3d"></div>
+        <div>
+          <div class="project-meta-head">
+            <span class="badge client">Emaar</span>
+            <span class="mono">Emaar Beachfront</span>
+          </div>
+          <h3>Bayview by Address</h3>
+        </div>
+        <div class="tags">
+          <b>Joinery Works</b>
+          <span class="mono">44 Sheets &middot; 1:20 to 1:1</span>
+          <span>Ultra-luxury beachfront suites, metal inlay profiles, custom dressing areas, mock-up sign-offs.</span>
+          <div class="tag-actions">
+            <a class="badge brochure" href="brochures/bayview-brochure.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#x1F4D6; Official Brochure (PDF)</a>
+          </div>
+        </div>
+        <div class="project-media-wrap">
+          <img src="images/bayview.jpg" alt="Bayview by Address Resorts by Emaar - Joinery Works" loading="lazy">
+          <span class="project-tag-overlay mono">Emaar Beachfront &middot; Joinery</span>
+          <span class="project-zoom-btn">&#x2922;</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SHEET 03 : EXPERIENCE & CAREER -->
+  <section class="experience sheet pad" id="experience" data-sheet="Experience" data-scale="1:1">
+    <div class="sheet-head">
+      <div>
+        <p class="eyebrow">Career Timeline &amp; Roles</p>
+        <h2>Experience &amp;<br>Responsibilities</h2>
+      </div>
+      <p class="mono" style="color:var(--ink-2)">4+ Years Professional Experience</p>
+    </div>
+
+    <div class="exp-timeline">
+      
+      <!-- IDEA MOBILI -->
+      <div class="exp-card">
+        <div class="glare-3d"></div>
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-company">Idea Mobili Building Materials LLC</h3>
+            <div class="exp-role">Junior Design Manager | Draughtsman &middot; Dubai, UAE</div>
+          </div>
+          <span class="exp-date">Aug 2023 &ndash; Present</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Prepare and submit comprehensive shop, coordination, and as-built drawings in strict compliance with consultant specs and developer standards.</li>
+          <li>Lead multi-disciplinary coordination between MEP, architectural, structural, and interior fit-out teams to ensure 100% clash-free installation.</li>
+          <li>Actively coordinate with project managers, site engineers, production teams, and external consultants to resolve design discrepancies swiftly.</li>
+          <li>Revise shop drawings in response to consultant review comments, RFIs, site conditions, and architectural revisions.</li>
+          <li>Conduct thorough site surveys to verify dimensional accuracy and verify that drawings reflect actual as-built conditions.</li>
+          <li>Provide real-time technical clarifications to factory production teams and site installation crews during fabrication and installation.</li>
+          <li>Monitor drawing submission schedules and maintain up-to-date drawing registers to ensure on-time approvals.</li>
+          <li>Support mock-up room fabrication, ensuring consultant-approved details are seamlessly integrated into mass production drawings.</li>
+          <li>Ensure all drawings adhere to strict quality assurance, company drafting standards, and client BOQ requirements.</li>
+        </ul>
+        <div class="exp-clients">
+          <span>Key Developer Projects Delivered:</span>
+          <strong>Cotier House 1 (Imtiaz)</strong> &middot;
+          <strong>Golf Heights (Emaar)</strong> &middot;
+          <strong>Sunridge (Emaar)</strong> &middot;
+          <strong>Aura Gardens (Tilal Al Ghaf)</strong> &middot;
+          <strong>Seascape (Emaar)</strong> &middot;
+          <strong>Fairway Villas (Emaar South)</strong> &middot;
+          <strong>Palace Residence (Emaar)</strong> &middot;
+          <strong>Bayview by Address (Emaar Beachfront)</strong>
+        </div>
+      </div>
+
+      <!-- MUTTUNGAL ASSOCIATES -->
+      <div class="exp-card">
+        <div class="glare-3d"></div>
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-company">Muttungal Associates</h3>
+            <div class="exp-role">Draughtsman &middot; Calicut, Kerala, India</div>
+          </div>
+          <span class="exp-date">2022 &ndash; 2023</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Prepared accurate and detailed architectural drawings required for legal construction approvals from local governing bodies (panchayats &amp; municipalities).</li>
+          <li>Compiled and submitted statutory submission packages, including architectural plans, sections, and authority permit forms.</li>
+          <li>Developed comprehensive building layout plans based on conceptual architectural designs and client briefs.</li>
+          <li>Created external elevation drawings depicting exterior finishes, fenestrations, and architectural building features.</li>
+        </ul>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="exp-card">
+        <div class="glare-3d"></div>
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-company">GPTC Meenangadi &mdash; State Board of Technical Education</h3>
+            <div class="exp-role">Diploma in Civil Engineering &middot; Kerala, India</div>
+          </div>
+          <span class="exp-date">2018 &ndash; 2021</span>
+        </div>
+        <p style="color:var(--ink-2);font-size:.92rem;margin:0">
+          Comprehensive civil engineering curriculum covering structural drafting, engineering mechanics, surveying and levelling, building materials and construction technology, AutoCAD applications, and project estimation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHEET 04 : CAPABILITY & METRICS -->
+  <section class="cap sheet" id="capability" data-sheet="Capability" data-scale="NTS">
+    <div class="marq" id="marq1" aria-hidden="true">
+      <span>AutoCAD</span><span>SketchUp</span><span>Lumion</span><span>MS Office</span>
+      <span>AutoCAD</span><span>SketchUp</span><span>Lumion</span><span>MS Office</span>
+      <span>AutoCAD</span><span>SketchUp</span><span>Lumion</span><span>MS Office</span>
+    </div>
+    <div class="marq alt" id="marq2" aria-hidden="true">
+      <span>Modular Kitchens</span><span>Shop Drawings</span><span>MEP Coordination</span><span>Joinery Detailing</span>
+      <span>As-Built Drawings</span><span>BOQ Take-Off</span><span>Drawing Registers</span><span>Mock-Up Details</span>
+    </div>
+    
+    <div class="pad">
+      <p class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">
+        Software and key competencies: AutoCAD, SketchUp, Lumion, MS Office. Modular kitchens, shop drawings, MEP coordination, as-built drawings, joinery detailing, BOQ take-off, drawing registers, mock-up details, site laser surveys.
+      </p>
+      
+      <!-- STATS -->
+      <div class="stats" id="stats">
+        <div class="stat">
+          <strong><span data-n="4">4</span>+ yrs</strong>
+          <span>Experience delivering UAE joinery &amp; fit-out drawings</span>
+        </div>
+        <div class="stat">
+          <strong><span data-n="8">8</span>+</strong>
+          <span>Major developer projects (Emaar, Tilal Al Ghaf &amp; Imtiaz)</span>
+        </div>
+        <div class="stat">
+          <strong>&plusmn;<span data-n="0.5" data-d="1">0.5</span></strong>
+          <span>mm fabrication tolerance held on all joinery &amp; kitchen details</span>
+        </div>
+        <div class="stat">
+          <strong><span data-n="100">100</span>%</strong>
+          <span>Clash-free MEP, structural &amp; site coordination record</span>
+        </div>
+      </div>
+
+      <!-- SKILLS MATRIX -->
+      <div class="skills-matrix">
+        <div class="skills-group">
+          <h4>Core Specializations</h4>
+          <div class="skills-list">
+            <span class="skill-pill core">Modular Kitchen Casework &amp; Stone Detailing</span>
+            <span class="skill-pill core">Shop Drawing Preparation</span>
+            <span class="skill-pill core">Joinery &amp; Interior Fit-Out Detailing</span>
+            <span class="skill-pill core">MEP &amp; Architectural Coordination</span>
+            <span class="skill-pill">Technical Drawing Interpretation</span>
+            <span class="skill-pill">As-Built Drawing Packages</span>
+            <span class="skill-pill">Mock-Up Drawing &amp; Approval</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h4>Software &amp; Digital Tools</h4>
+          <div class="skills-list">
+            <span class="skill-pill core">AutoCAD (2D Drafting &amp; Detailing)</span>
+            <span class="skill-pill core">SketchUp (3D Modelling)</span>
+            <span class="skill-pill">Lumion (Visual Rendering)</span>
+            <span class="skill-pill">MS Office Package (Excel, Word, PowerPoint)</span>
+            <span class="skill-pill">Aconex / Drawing Registers</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h4>Management &amp; Coordination</h4>
+          <div class="skills-list">
+            <span class="skill-pill">Design Coordination with Consultants &amp; Clients</span>
+            <span class="skill-pill">BOQ &amp; Basic Quantity Take-Off</span>
+            <span class="skill-pill">Drawing Revision &amp; Document Control</span>
+            <span class="skill-pill">Site Dimension Verification &amp; Laser Survey</span>
+            <span class="skill-pill">Factory &amp; Site Technical Clarifications</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHEET 05 : CONTACT & PHYSICAL INK STAMPING -->
+  <section class="contact sheet pad" id="contact" data-sheet="Contact" data-scale="1:1">
+    <p class="eyebrow" style="margin-bottom:1.4rem">Drawing Issue &amp; Contact</p>
+    <h2 id="cth">Let&rsquo;s <span class="red">build</span> it right.</h2>
+    
+    <div class="stamp-container">
+      <div class="stamp-shockwave"></div>
+      <div class="stamp" id="stamp" aria-hidden="true">
+        <div>
+          APPROVED FOR PRODUCTION
+          <small>REV A &middot; UAE DEVELOPER STANDARDS</small>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-details">
+        <p class="lede">
+          Junior Design Manager &amp; Draughtsman available for high-end joinery, modular kitchens, and luxury interior fit-out projects across Dubai, Abu Dhabi, and the UAE.
+        </p>
+        
+        <div class="contact-links">
+          <div class="contact-item">
+            <small>Email</small>
+            <code id="mailTxt">chiragkainoth@gmail.com</code>
+          </div>
+          <div class="contact-item">
+            <small>Phone / WA</small>
+            <a href="tel:+971556901039">+971 55 690 1039</a>
+          </div>
+          <div class="contact-item">
+            <small>Location</small>
+            <span class="mono" style="font-size:1.05rem;color:var(--ink)">Dubai | Abu Dhabi, United Arab Emirates</span>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <button class="btn" id="copyBtn" type="button">Copy Email</button>
+          <a class="btn primary" href="https://wa.me/971556901039" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a class="btn" href="Chirag_Kainoth_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </div>
+      </div>
+
+      <!-- TITLE BLOCK -->
+      <div class="titleblock mono">
+        <div><small>Drawn by</small>Chirag Kainoth</div>
+        <div><small>Role</small>Junior Design Manager | Draughtsman</div>
+        <div><small>Discipline</small>Joinery Draftsman</div>
+        <div><small>Experience</small>4+ Years (UAE &amp; India)</div>
+        <div><small>Clients</small>Emaar, Tilal Al Ghaf, Imtiaz, Private Developers</div>
+        <div><small>Based in</small>Dubai | Abu Dhabi, UAE</div>
+        <div><small>Software</small>AutoCAD, SketchUp, Lumion</div>
+        <div><small>Languages</small>English, Malayalam, Tamil, Hindi</div>
+        <div><small>Scale</small>1:1</div>
+        <div><small>Status</small>Open to Opportunities &middot; Rev A</div>
+        <div class="full-span"><small>Standard</small>All dimensions in mm &middot; Clash-free MEP &amp; site coordinated</div>
+      </div>
+    </div>
+    
+    <div class="foot mono">
+      <span>&copy; 2026 Chirag Kainoth &middot; All rights reserved</span>
+      <span>Do not scale from this drawing &middot; Fit-out, Joinery &amp; Kitchen Specialist</span>
+    </div>
+  </section>
+</main>
+
+<!-- PROJECT LIGHTBOX MODAL WITH 3D UNFOLD -->
+<div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="Project Preview">
+    </div>
+    <div class="modal-content">
+      <div class="modal-title-row">
+        <div>
+          <span class="badge client" id="modalClient" style="margin-bottom:.4rem">Emaar</span>
+          <h3 id="modalTitle">Project Title</h3>
+        </div>
+        <span class="mono" id="modalScope" style="color:var(--red);font-weight:600">Joinery Works</span>
+      </div>
+      <p id="modalDesc" style="color:var(--ink-2);line-height:1.55">Project detailed description and drawing scope.</p>
+      <div class="modal-grid mono">
+        <div><small>Client / Developer</small><span id="modalClientText">Emaar Properties</span></div>
+        <div><small>Scope of Detailing</small><span id="modalScopeText">Shop Drawings &amp; Coordination</span></div>
+        <div><small>Key Materials</small><span id="modalMaterials">MR-MDF, Oak Veneer, Stone, Metal Trims</span></div>
+        <div><small>Deliverables</small><span id="modalSheets">Plans, Elevations, 1:2 Details, BOQ</span></div>
+      </div>
+      <div class="modal-actions" id="modalActions">
+        <a class="btn primary" id="modalBrochureBtn" href="" target="_blank" rel="noopener">&#x1F4D6; View Developer Brochure (PDF)</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS: GSAP & SCROLLTRIGGER (Local + CDN Fallback) -->
+<script src="js/gsap.min.js"></script>
+<script>window.gsap || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"><\/script>');</script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>window.ScrollTrigger || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"><\/script>');</script>
+
+<script>
+(function(){
+'use strict';
+const NS='http://www.w3.org/2000/svg';
+const el=(n,a,p)=>{const e=document.createElementNS(NS,n);for(const k in (a||{}))e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;};
+const fmt=n=>n.toFixed(1);
+
+/* ---------- 3D Modular Kitchen Structure Engine (units are mm) ---------- */
+const C30=0.8660254, S30=0.5;
+const P=(x,y,z)=>[(x-z)*C30,(x+z)*S30-y];
+const poly=a=>'M'+a.map(p=>P(p[0],p[1],p[2]).map(fmt).join(' ')).join('L')+'Z';
+const seg=(a,b)=>'M'+P(a[0],a[1],a[2]).map(fmt).join(' ')+'L'+P(b[0],b[1],b[2]).map(fmt).join(' ');
+
+function box(g,b,cls){
+  const x0=b[0],y0=b[1],z0=b[2],x1=b[3],y1=b[4],z1=b[5],c=cls||['f-top','f-front','f-right'];
+  el('path',{class:c[0]+' ln d',d:poly([[x0,y1,z0],[x1,y1,z0],[x1,y1,z1],[x0,y1,z1]])},g);
+  el('path',{class:c[1]+' ln d',d:poly([[x0,y0,z1],[x1,y0,z1],[x1,y1,z1],[x0,y1,z1]])},g);
+  el('path',{class:c[2]+' ln d',d:poly([[x1,y0,z0],[x1,y0,z1],[x1,y1,z1],[x1,y1,z0]])},g);
+}
+
+const seeded=(()=>{let s=13;return()=>{s=(s*16807)%2147483647;return s/2147483647;};})();
+function grain(g,x0,x1,y0,y1,z){
+  const n=Math.max(4,Math.round((x1-x0)/26));
+  for(let i=1;i<n;i++){
+    const x=x0+(x1-x0)*i/n+(seeded()-.5)*8, a=y0+14+seeded()*40, b=y1-14-seeded()*50;
+    el('path',{class:'grain d',d:seg([x,a,z],[x+(seeded()-.5)*6,b,z])},g);
+  }
+}
+
+/* Modular Kitchen Dimensions in mm */
+const KW=900, KD=600, KH_BASE=820, KH_TOP=858, KH_SPLASH=1420, KH_WALL=2020;
+const WOOD=['w-top','w-front','w-right'], STONE=['s-top','s-front','s-right'], INK=['fill-ink ln d','fill-ink ln d','fill-ink ln d'];
+const DARK=['d-top','d-front','d-right'];
+
+/* Kitchen Structural Modules */
+const kitchenParts=[
+  // 1. Plinth / Sub-base (Drops downwards on scroll)
+  {
+    id:'plinth',
+    boxes:[[30, 0, 30, KW-30, 100, KD-30]],
+    ex:[0, -200, 0],
+    cls: DARK
+  },
+  // 2. Base Carcass: gables, bottom shelf, center divider (shifts backward)
+  {
+    id:'carcass',
+    boxes:[
+      [0, 100, 0, 18, KH_BASE, KD],             // Left Gable
+      [KW-18, 100, 0, KW, KH_BASE, KD],         // Right Gable
+      [18, 100, 0, KW-18, 118, KD],             // Bottom shelf
+      [440, 118, 0, 458, KH_BASE, KD]           // Center divider
+    ],
+    ex:[0, 0, -80]
+  },
+  // 3. Carcass Back Panel (Rebated back, slides far backward)
+  {
+    id:'back',
+    boxes:[[18, 118, 0, KW-18, KH_BASE, 8]],
+    ex:[0, 0, -260]
+  },
+  // 4. Drawers: 3 soft-close pull-out drawer boxes on left side (slide forward)
+  {
+    id:'drawers',
+    boxes:[
+      [22, 590, KD, 436, 810, KD+18],           // Top cutlery drawer front
+      [22, 350, KD, 436, 580, KD+18],           // Middle pan drawer front
+      [22, 120, KD, 436, 340, KD+18],           // Bottom deep drawer front
+      [80, 770, KD+18, 380, 785, KD+28],        // Top handle
+      [80, 540, KD+18, 380, 555, KD+28],        // Middle handle
+      [80, 300, KD+18, 380, 315, KD+28]         // Bottom handle
+    ],
+    wood: true,
+    ex:[-100, 0, 320]
+  },
+  // 5. Right Base Unit Door (Under-sink cabinet door, swings/slides right-forward)
+  {
+    id:'door',
+    boxes:[
+      [462, 120, KD, KW-22, 810, KD+18],        // Door panel
+      [480, 620, KD+18, 495, 780, KD+30]        // Vertical bar handle
+    ],
+    wood: true,
+    ex:[130, 0, 320]
+  },
+  // 6. 38mm Quartz Countertop / Worktop (Lifts upward in 3D)
+  {
+    id:'worktop',
+    boxes:[
+      [-10, KH_BASE, -10, KW+10, KH_TOP, KD+20]  // Mitred Quartz Slab
+    ],
+    stone: true,
+    ex:[0, 260, 0]
+  },
+  // 7. Undermount Sink Basin & Chrome Mixer Tap (Lifts higher above worktop)
+  {
+    id:'sink',
+    boxes:[
+      [500, KH_BASE-120, 140, 800, KH_TOP+2, 460], // Sink basin
+      [640, KH_TOP, 80, 660, KH_TOP+160, 100],     // Tap vertical mixer column
+      [640, KH_TOP+140, 100, 660, KH_TOP+165, 260] // Tap gooseneck horizontal spout
+    ],
+    cls: DARK,
+    ex:[0, 420, 0]
+  },
+  // 8. Splashback Panel (running behind worktop)
+  {
+    id:'splash',
+    boxes:[
+      [0, KH_TOP, 0, KW, KH_SPLASH, 18]
+    ],
+    cls: STONE,
+    ex:[0, 0, -180]
+  },
+  // 9. Upper Wall Cabinets: overhead modular cabinets with Aventos lift doors (lifts to ceiling)
+  {
+    id:'wall_cab',
+    boxes:[
+      [0, KH_SPLASH, 0, KW, KH_WALL, 340],             // Overhead carcass
+      [4, KH_SPLASH+6, 340, KW/2-2, KH_WALL-6, 358],   // Left Aventos door
+      [KW/2+2, KH_SPLASH+6, 340, KW-4, KH_WALL-6, 358],// Right Aventos door
+      [20, KH_SPLASH-12, 150, KW-20, KH_SPLASH, 175]   // Concealed LED profile channel
+    ],
+    wood: true,
+    ex:[0, 560, 0]
+  }
+];
+
+window.__buildCabinet=function(svg){
+  const root=el('g',{},svg), pg={};
+  kitchenParts.forEach(p=>{
+    const g=el('g',{class:'part','data-id':p.id},root); pg[p.id]=g; p.g=g;
+    p.boxes.forEach((b,i)=>{
+      if(p.cls) box(g,b,p.cls);
+      else if(p.stone) box(g,b,STONE);
+      else if(p.wood && (i===0 || i<3)) box(g,b,WOOD);
+      else box(g,b,null);
+    });
+    if(p.wood && p.boxes.length>0){
+      const b=p.boxes[0];
+      grain(g,b[0]+12,b[3]-12,b[1],b[4],b[5]);
+    }
+  });
+
+  const dimsG=el('g',{class:'dims'},root);
+  const DZ=KD+120, DX=KW+120;
+  
+  const dim=(a,b,label,rot,off,extPath)=>{
+    el('path',{class:'ln hair d',d:extPath},dimsG);
+    const pa=P(a[0],a[1],a[2]),pb=P(b[0],b[1],b[2]);
+    el('path',{class:'ln d',d:'M'+fmt(pa[0])+' '+fmt(pa[1])+'L'+fmt(pb[0])+' '+fmt(pb[1])},dimsG);
+    [pa,pb].forEach(q=>el('path',{class:'ln d',d:'M'+fmt(q[0]-14)+' '+fmt(q[1]+14)+'L'+fmt(q[0]+14)+' '+fmt(q[1]-14)},dimsG));
+    const mx=(pa[0]+pb[0])/2+off[0],my=(pa[1]+pb[1])/2+off[1];
+    const t=el('text',{class:'txt ink t',x:fmt(mx),y:fmt(my),'text-anchor':'middle','font-size':'32',transform:'rotate('+rot+' '+fmt(mx)+' '+fmt(my)+')'},dimsG);
+    t.textContent=label;
+  };
+  
+  // Kitchen Overall Dimensions
+  dim([0,0,DZ],[KW,0,DZ],'900 WIDTH',30,[0,40],seg([0,0,KD+8],[0,0,DZ+16])+seg([KW,0,KD+8],[KW,0,DZ+16]));
+  dim([DX,0,0],[DX,0,KD],'600 DEPTH',-30,[0,40],seg([KW+8,0,0],[DX+16,0,0])+seg([KW+8,0,KD],[DX+16,0,KD]));
+  dim([DX,0,KD],[DX,KH_WALL,KD],'2058 HEIGHT',-90,[36,0],seg([KW+8,KH_WALL,KD],[DX+16,KH_WALL,KD]));
+
+  // Technical Callouts
+  const call=(partId,pt,off,letter)=>{
+    const g=el('g',{class:'call'},pg[partId]),q=P(pt[0],pt[1],pt[2]);
+    el('circle',{cx:fmt(q[0]),cy:fmt(q[1]),r:8,style:'fill:var(--red)'},g);
+    el('path',{class:'ln rd d',d:'M'+fmt(q[0])+' '+fmt(q[1])+'L'+fmt(q[0]+off[0])+' '+fmt(q[1]+off[1])},g);
+    el('circle',{class:'ln rd d',cx:fmt(q[0]+off[0]),cy:fmt(q[1]+off[1]),r:26,style:'fill:var(--paper)'},g);
+    const t=el('text',{class:'txt rd',x:fmt(q[0]+off[0]),y:fmt(q[1]+off[1]+10),'text-anchor':'middle','font-size':'26'},g);
+    t.textContent=letter;
+  };
+  
+  call('worktop',[KW/2,KH_TOP,KD/2],[130,-90],'A');
+  call('drawers',[220,480,KD+18],[-120,-60],'B');
+  call('carcass',[18,450,KD/2],[-110,60],'C');
+  call('wall_cab',[KW/2,KH_SPLASH+300,340],[140,-80],'D');
+
+  return {root:root,pg:pg,parts:kitchenParts,dims:dimsG,P:P};
+};
+})();
+
+(function(){
+'use strict';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const NS='http://www.w3.org/2000/svg';
+const el=(n,a,p)=>{const e=document.createElementNS(NS,n);for(const k in (a||{}))e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;};
+const canAnim=!!(window.gsap&&window.ScrollTrigger);
+const fmt=n=>n.toFixed(1);
+
+/* ---------- theme toggle ---------- */
+const themeBtn=$('#themeToggle'), themeLabel=$('#themeLabel');
+const currentTheme=localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+function applyTheme(th){
+  document.documentElement.setAttribute('data-theme',th);
+  localStorage.setItem('theme',th);
+  if(themeLabel) themeLabel.textContent = th==='dark' ? 'Paper Light' : 'CAD Dark';
+}
+applyTheme(currentTheme);
+if(themeBtn){
+  themeBtn.addEventListener('click',()=>{
+    const next = document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+    applyTheme(next);
+  });
+}
+
+/* ---------- draw-on animation helpers ---------- */
+function prep(root){
+  if(!root) return [];
+  const items=$$('.d',root);
+  items.forEach(e=>{
+    let L=100; try{L=e.getTotalLength()||100;}catch(_){}
+    e.style.strokeDasharray=L; e.style.strokeDashoffset=L;
+    if(e.classList.contains('dash')){e.style.opacity=0;}
+  });
+  $$('.t',root).forEach(t=>t.style.opacity=0);
+  return items;
+}
+function drawIn(root,vars){
+  if(!root) return gsap.timeline();
+  const lines=$$('.d',root).filter(e=>!(vars&&vars.skipCalls&&e.closest('.call'))), txt=$$('.t',root);
+  const tl=gsap.timeline(vars&&vars.tl||{});
+  tl.to(lines,{strokeDashoffset:0,opacity:1,duration:(vars&&vars.duration)||1.2,ease:(vars&&vars.ease)||'power2.inOut',stagger:(vars&&vars.stagger)||{amount:.6}},0);
+  tl.to(txt,{opacity:1,duration:.5,stagger:.05},.4);
+  tl.add(()=>{
+    lines.forEach(e=>{
+      e.style.strokeDasharray='';
+      e.style.strokeDashoffset='';
+      e.style.opacity='';
+    });
+    txt.forEach(t=>{ t.style.opacity=''; });
+  });
+  return tl;
+}
+
+/* ---------- hero isometric modular kitchen ---------- */
+const svg=$('#cab'); svg.setAttribute('class','iso');
+const cab=window.__buildCabinet(svg);
+const exOff=(p,t)=>{const e=p.ex;return[(e[0]-e[2])*0.8660254*t,((e[0]+e[2])*0.5-e[1])*t];};
+function setT(t){cab.parts.forEach(p=>{const o=exOff(p,t);p.g.setAttribute('transform','translate('+fmt(o[0])+' '+fmt(o[1])+')');});}
+const calls=$$('.call',svg);
+
+// Calibrated bounding boxes (t=0 assembled, t=1 exploded)
+const defaultA=[-700,-2100,1660,3000];
+const defaultB=[-980,-2620,2040,3640];
+let A=defaultA, B=defaultB;
+
+try {
+  setT(0);
+  calls.forEach(c=>c.style.display='none');
+  const b0=cab.root.getBBox();
+  calls.forEach(c=>c.style.display='');
+  cab.dims.style.display='none';
+  setT(1);
+  const b1=cab.root.getBBox();
+  cab.dims.style.display='';
+  setT(0);
+  if(b0 && b0.width>300 && b0.height>300 && b1 && b1.width>300 && b1.height>300){
+    const pad=70;
+    A=[b0.x-pad, b0.y-pad, b0.width+pad*2, b0.height+pad*2];
+    B=[b1.x-pad, b1.y-pad, b1.width+pad*2, b1.height+pad*2];
+  }
+} catch(_){}
+
+const lerp=(a,b,t)=>a+(b-a)*t;
+function setView(t){svg.setAttribute('viewBox',A.map((v,i)=>fmt(lerp(v,B[i],t))).join(' '));}
+setView(0);
+
+/* ---------- 3D Hero Parallax on Mouse Move ---------- */
+const heroStage=$('#heroStage'), heroSection=$('#top');
+if(heroSection && heroStage){
+  heroSection.addEventListener('pointermove',e=>{
+    const rect=heroSection.getBoundingClientRect();
+    const cx=(e.clientX-rect.left)/rect.width - 0.5;
+    const cy=(e.clientY-rect.top)/rect.height - 0.5;
+    heroStage.style.transform='perspective(1200px) rotateY('+(cx*12).toFixed(2)+'deg) rotateX('+(-cy*12).toFixed(2)+'deg)';
+  });
+  heroSection.addEventListener('pointerleave',()=>{
+    heroStage.style.transform='perspective(1200px) rotateY(0deg) rotateX(0deg)';
+  });
+}
+
+/* ---------- fallback procedural thumbnails for rows without photos ---------- */
+function thumb(row){
+  const s=$('svg',row);
+  if(!s) return;
+  const cols=+row.dataset.cols || 4, rows=+row.dataset.rows || 2, k=row.dataset.kind || 'wardrobe';
+  const add=(t,a)=>el(t,Object.assign({class:'ln d'},a),s), X0=30,X1=370,Y0=26,Y1=166,w=X1-X0,h=Y1-Y0;
+  if(k==='wardrobe'||k==='shelf'){
+    add('rect',{x:X0,y:Y0,width:w,height:h});
+    for(let c=1;c<cols;c++)add('path',{class:'ln thin d',d:'M'+(X0+w*c/cols)+' '+Y0+'V'+Y1});
+    for(let r=1;r<rows;r++)add('path',{class:'ln thin d',d:'M'+X0+' '+(Y0+h*r/rows)+'H'+X1});
+    for(let c=0;c<cols;c++)for(let r=0;r<rows;r++){const cx=X0+w*(c+.5)/cols,cy=Y0+h*(r+.5)/rows;
+      if(k==='wardrobe')add('path',{class:'ln d',d:'M'+(cx+(c%2?-1:1)*w/cols*.32)+' '+(cy-8)+'V'+(cy+8)});
+      else if((c+r)%3===0)add('rect',{class:'ln hair d',x:cx-w/cols*.3,y:cy-h/rows*.28,width:w/cols*.6,height:h/rows*.56,fill:'url(#hatch)',style:'color:var(--ink)'});}
+  }else if(k==='bar'){
+    add('rect',{x:X0,y:Y0+46,width:w,height:h-46});
+    for(let i=1;i<10;i++)add('path',{class:'ln thin d',d:'M'+X0+' '+(Y0+46+(h-46)*i/10)+'H'+X1});
+    add('path',{d:'M'+(X0-8)+' '+(Y0+46)+'H'+(X1+8)});
+    for(let c=0;c<cols;c++)add('rect',{class:'ln hair d',x:X0+10+c*(w-20)/cols,y:Y0,width:(w-20)/cols-10,height:30,fill:'url(#hatch)',style:'color:var(--ink)'});
+  }
+  const t=el('text',{class:'txt t',x:X0,y:190},s);t.textContent=(k.toUpperCase())+'  SHOP ELEVATION';
+}
+const rows=$$('.row');
+rows.forEach(thumb);
+
+/* ---------- 3D Interactive Card Tilt with Specular Glare ---------- */
+const tiltElements=$$('.row, .exp-card, .titleblock');
+tiltElements.forEach(card=>{
+    card.addEventListener('pointermove',e=>{
+      const rect=card.getBoundingClientRect();
+      const x=e.clientX-rect.left;
+      const y=e.clientY-rect.top;
+      const cx=x/rect.width - 0.5;
+      const cy=y/rect.height - 0.5;
+      const rotX=(-cy*8).toFixed(2);
+      const rotY=(cx*8).toFixed(2);
+      
+      card.style.setProperty('--gx', x+'px');
+      card.style.setProperty('--gy', y+'px');
+      
+      if(card.classList.contains('row')){
+        card.style.transform='perspective(1000px) rotateX('+rotX+'deg) rotateY('+rotY+'deg) translateZ(8px)';
+      } else if(card.classList.contains('exp-card')){
+        card.style.transform='perspective(1000px) translateY(-6px) rotateX('+rotX+'deg) rotateY('+rotY+'deg) translateZ(12px)';
+      } else {
+        card.style.transform='perspective(900px) rotateX('+rotX+'deg) rotateY('+rotY+'deg) translateZ(8px)';
+      }
+    });
+    
+    card.addEventListener('pointerleave',()=>{
+      card.style.transform='';
+    });
+  });
+
+/* ---------- project modal data & interaction (with brochure download) ---------- */
+const projectData = {
+  'cotier-house': {
+    title: 'Cotier House 1',
+    client: 'Imtiaz Developments',
+    location: 'Dubai Islands, Dubai, UAE',
+    scope: 'Kitchen &amp; Wardrobe Works',
+    image: 'images/cotier-house.jpg',
+    brochure: 'https://imtiaz.ae/property/cotier-house-by-imtiaz',
+    brochureText: 'Visit Official Project Page',
+    desc: 'Prime waterfront residential development in Dubai Islands by Imtiaz Developments. Detailed comprehensive shop drawings for open-plan modular kitchens, quartz waterfall island counters, under-sink plumbing integrations, and master bedroom walk-in wardrobes with concealed lighting channels.',
+    materials: 'Moisture-Resistant MDF (MR-MDF), Matte Acrylic Laminates, 38 mm Quartz Counters, Blum Soft-Close Runners, Concealed Aluminum Gola Profiles',
+    sheets: '34 Sheets &middot; Kitchen Casework, Wardrobes, 1:2 Details &amp; Hardware Schedules'
+  },
+  'golf-heights': {
+    title: 'Golf Heights',
+    client: 'Emaar',
+    location: 'Emirates Living, Dubai, UAE',
+    scope: 'Joinery Works &amp; Architectural Fit-Out',
+    image: 'images/golf-heights.jpg',
+    brochure: 'brochures/golf-heights-brochure.pdf',
+    brochureText: 'Download Official Brochure (PDF)',
+    desc: 'High-end residential joinery package for Emaar. Prepared complete shop drawing packages for master bedroom wardrobes, bespoke bathroom vanities, and decorative wall panelling. Coordinated MEP services for integrated LED lighting channels and concealed drawer fittings.',
+    materials: 'Oak Veneer, Moisture-Resistant MDF (MR-MDF), Bronze Metal Accents, Quartz Stone Tops',
+    sheets: '42 Sheets &middot; Plans, Elevations, 1:2 Details &amp; Hardware Schedules'
+  },
+  'sunridge': {
+    title: 'Sunridge at Rashid Yachts & Marina',
+    client: 'Emaar',
+    location: 'Rashid Yachts & Marina, Dubai',
+    scope: 'Joinery Works &amp; Waterfront Millwork',
+    image: 'images/sunridge.jpg',
+    brochure: 'brochures/sunridge-brochure.pdf',
+    brochureText: 'Download Official Brochure (PDF)',
+    desc: 'Luxury waterfront development by Emaar. Responsible for production drawings and consultant coordination for custom walk-in dressing units, feature headboard millwork, vanity units, and utility joinery. Resolved site tolerances against blockwork and MEP risers.',
+    materials: 'Natural Wood Veneer, Polyurethane Painted Finishes, Blum Soft-Close Systems',
+    sheets: '48 Sheets &middot; 1:20 Layouts to 1:1 CNC Profiles'
+  },
+  'aura-gardens': {
+    title: 'Aura Gardens',
+    client: 'Tilal Al Ghaf',
+    location: 'Tilal Al Ghaf, Dubai',
+    scope: 'Luxury Villa Joinery Works',
+    image: 'images/aura-gardens.jpg',
+    brochure: 'brochures/aura-gardens-brochure.pdf',
+    brochureText: 'Download Official Brochure (PDF)',
+    desc: 'Premium villa community by Majid Al Futtaim / Tilal Al Ghaf. Delivered comprehensive shop drawings and factory coordination for full-height wardrobes, study joinery, TV feature units, and under-stair storage systems. Monitored mock-up unit sign-off with the lead consultant.',
+    materials: 'Engineered Timber, Smoked Glass, Concealed Aluminum Profiles, Hafele Hardware',
+    sheets: '36 Sheets &middot; Architectural Joinery &amp; Cutting Lists'
+  },
+  'seascape': {
+    title: 'Seascape at Rashid Yachts & Marina',
+    client: 'Emaar',
+    location: 'Rashid Yachts & Marina, Dubai',
+    scope: 'Joinery Works &amp; Architectural Casework',
+    image: 'images/seascape.jpg',
+    brochure: 'brochures/seascape-brochure.pdf',
+    brochureText: 'Download Official Brochure (PDF)',
+    desc: 'High-specification coastal residential towers. Coordinated shop drawings for luxury master dressing suites, corridor wall cladding, and vanity counters. Ensured all drawings complied with strict Emaar joinery specifications and consultant RFI requirements.',
+    materials: 'Fluted Panels, Architectural Veneer, Marine-Grade Moisture Resistant Boards',
+    sheets: '38 Sheets &middot; 1:20 Setting Out, 1:10 Elevations, 1:2 Details'
+  },
+  'fairway-villas': {
+    title: 'Fairway Villas',
+    client: 'Emaar South',
+    location: 'Emaar South, Dubai',
+    scope: 'Kitchen Works &amp; Premium Casework',
+    image: 'images/fairway-villas.jpg',
+    brochure: 'brochures/fairway-villas-brochure.pdf',
+    brochureText: 'Download Official Brochure (PDF)',
+    desc: 'Luxury golf course villas at Emaar South. Detailed comprehensive kitchen shop drawings including base and overhead cabinetry, island counter casework, appliance integrations, and stone worktop sub-bases. Handled clash-detection with plumbing drain points and extractor ducts.',
+    materials: 'MR-MDF Core, Acrylic Matt Laminates, 38 mm Quartz Counters, Integrated Blum Hardware',
+    sheets: '28 Sheets &middot; Kitchen Plans, Elevations, Service Rough-Ins &amp; Details'
+  },
+  'palace-residence': {
+    title: 'Palace Residence',
+    client: 'Emaar',
+    location: 'Dubai Creek Harbour, Dubai',
+    scope: 'Kitchen Works &amp; Casework',
+    image: 'images/palace-residence.jpg',
+    brochure: 'brochures/creek-palace-brochure.pdf',
+    brochureText: 'Download Official Brochure (PDF)',
+    desc: 'Hospitality-grade branded residences by Emaar at Dubai Creek Harbour. Detailed premium kitchen cabinetry, pantry runs, and stone backsplashes with exact coordination for built-in high-end appliances and MEP service rough-ins.',
+    materials: 'Moisture-Resistant MDF, Lacquered High-Gloss &amp; Matt Finishes, Granite Tops',
+    sheets: '32 Sheets &middot; Kitchen Shop Drawings &amp; Schedules'
+  },
+  'bayview': {
+    title: 'Bayview by Address Resorts',
+    client: 'Emaar',
+    location: 'Emaar Beachfront, Dubai',
+    scope: 'Joinery Works &amp; Bespoke Millwork',
+    image: 'images/bayview.jpg',
+    brochure: 'brochures/bayview-brochure.pdf',
+    brochureText: 'Download Official Brochure (PDF)',
+    desc: 'Branded luxury coastal suites by Address at Emaar Beachfront. Drafted detailed shop drawings for bespoke dressing areas, brushed bronze metal trim detailing, and custom joinery mock-ups for consultant review and site approval.',
+    materials: 'Exotic Wood Veneers, Brushed Champagne Metal Trims, Acoustic Linings',
+    sheets: '44 Sheets &middot; 1:20 to 1:1 Architectural Details'
+  }
+};
+
+const modal = $('#projectModal'), modalImg = $('#modalImg'), modalTitle = $('#modalTitle'), modalClient = $('#modalClient');
+const modalScope = $('#modalScope'), modalDesc = $('#modalDesc'), modalClientText = $('#modalClientText');
+const modalScopeText = $('#modalScopeText'), modalMaterials = $('#modalMaterials'), modalSheets = $('#modalSheets');
+const modalBrochureBtn = $('#modalBrochureBtn'), modalClose = $('#modalClose');
+
+function openProjectModal(key){
+  const p = projectData[key];
+  if(!p) return;
+  modalTitle.textContent = p.title;
+  modalClient.textContent = p.client;
+  modalClientText.textContent = p.client + ' (' + p.location + ')';
+  modalScope.textContent = p.scope;
+  modalScopeText.textContent = p.scope;
+  modalDesc.textContent = p.desc;
+  modalMaterials.innerHTML = p.materials;
+  modalSheets.innerHTML = p.sheets;
+  
+  if(p.image){
+    modalImg.src = p.image;
+    modalImg.style.display = 'block';
+  } else {
+    modalImg.style.display = 'none';
+  }
+
+  if(p.brochure && modalBrochureBtn){
+    modalBrochureBtn.href = p.brochure;
+    modalBrochureBtn.textContent = p.brochureText || 'View Brochure';
+    modalBrochureBtn.style.display = 'inline-flex';
+  } else if(modalBrochureBtn) {
+    modalBrochureBtn.style.display = 'none';
+  }
+  
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+rows.forEach(r=>{
+  r.addEventListener('click',()=>{
+    const pk = r.dataset.project;
+    if(pk) openProjectModal(pk);
+  });
+});
+if(modalClose) modalClose.addEventListener('click', closeProjectModal);
+if(modal) modal.addEventListener('click',e=>{ if(e.target===modal) closeProjectModal(); });
+window.addEventListener('keydown',e=>{ if(e.key==='Escape'&&modal.classList.contains('open')) closeProjectModal(); });
+
+/* ---------- HUD & Rail Wiring (5 Sheets) ---------- */
+const sheets=$$('[data-sheet]');
+function setHud(i){
+  const s=sheets[i];
+  if(!s) return;
+  const nameEl=$('#hudName'), scaleEl=$('#hudScale');
+  if(nameEl) nameEl.textContent=s.dataset.sheet;
+  if(scaleEl) scaleEl.textContent=s.dataset.scale;
+}
+
+function staticMode(){
+  setT(0);setView(0);
+  $$('.d',svg).forEach(e=>{e.style.strokeDasharray='';e.style.strokeDashoffset='';e.style.opacity='1';});
+  $$('.t',svg).forEach(t=>t.style.opacity='1');
+  if(cab.dims) cab.dims.style.display='';
+  calls.forEach(c=>c.style.opacity=1);
+  const legend=$('#legend'), stageName=$('#stageName'), cue=$('#cue');
+  if(legend) legend.style.opacity=1;
+  if(stageName) stageName.textContent='Assembled';
+  if(cue) cue.style.display='none';
+  $$('[data-n]').forEach(s=>{const n=+s.dataset.n,d=+(s.dataset.d||0);s.textContent=d?n.toFixed(d):n.toLocaleString('en-US');});
+}
+
+/* crosshair (mouse only) */
+(function(){
+  const xh=$('#xhair'),xx=$('.xh-x'),xy=$('.xh-y'),rd=$('#xhRead');let raf=0,mx=0,my=0;
+  window.addEventListener('pointermove',e=>{
+    if(e.pointerType!=='mouse')return;mx=e.clientX;my=e.clientY;xh.classList.add('on');
+    if(!raf)raf=requestAnimationFrame(()=>{raf=0;xx.style.transform='translateY('+my+'px)';xy.style.transform='translateX('+mx+'px)';
+      rd.style.transform='translate('+(mx+10)+'px,'+(my+10)+'px)';
+      rd.textContent='X '+String(Math.round(mx*10)).padStart(5,'0')+'  Y '+String(Math.round(my*10)).padStart(5,'0');});
+  },{passive:true});
+  document.addEventListener('pointerleave',()=>xh.classList.remove('on'));
+})();
+
+/* copy address */
+$('#copyBtn').addEventListener('click',async()=>{
+  const b=$('#copyBtn'),t=$('#mailTxt');
+  try{await navigator.clipboard.writeText(t.textContent);b.textContent='Copied';}
+  catch(_){const r=document.createRange();r.selectNodeContents(t);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Select + copy';}
+  setTimeout(()=>{b.textContent='Copy Email';},2200);
+});
+
+if(!canAnim){
+  staticMode();
+  $$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=$(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth'});}}));
+  setHud(0);
+  return;
+}
+
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.config({ignoreMobileResize:true});
+
+/* initial hidden states for drawings */
+prep(svg); rows.forEach(r=>prep($('svg',r)));
+gsap.set(calls,{opacity:0});
+
+/* hero state controller: modular kitchen assemble -> explode -> annotate */
+const proxy={t:0},apply=()=>{setT(proxy.t);setView(proxy.t);};
+
+/* hero intro */
+gsap.timeline({delay:.1})
+  .from('.hero h1 .ln1>span',{yPercent:115,duration:.95,stagger:.1,ease:'power4.out'},0)
+  .from('.hero .eyebrow,#cue',{y:14,opacity:0,duration:.6,stagger:.1},.3)
+  .add(drawIn(svg,{duration:1.4,stagger:{amount:0.7},skipCalls:true}),.15)
+  .to(proxy,{t:0.18,duration:0.6,ease:'power2.out',onUpdate:apply},1.5)
+  .to(proxy,{t:0,duration:0.7,ease:'power2.inOut',onUpdate:apply},2.1);
+
+/* hero scrub */
+const htl=gsap.timeline({
+  defaults:{ease:'none'},
+  scrollTrigger:{
+    trigger:'.hero-pin',
+    start:'top top',
+    end:'+=260%',
+    pin:true,
+    scrub:0.6,
+    anticipatePin:1,
+    invalidateOnRefresh:true,
+    onUpdate:s=>{
+      const p=s.progress;
+      $('#stageName').textContent=p<.12?'Assembled':p<.72?'Exploded':'Annotated';
+      apply();
+    }
+  }
+});
+htl.to('#cue',{opacity:0,duration:.4},0)
+  .to('.dims',{opacity:0,duration:.8},0.4)
+  .to(proxy,{t:1,duration:5,ease:'power2.inOut',onUpdate:apply},0.6)
+  .fromTo('#lede',{opacity:1,y:0},{opacity:0,y:-14,duration:1},1.2)
+  .fromTo('#legend',{opacity:0,y:14},{opacity:1,y:0,duration:1},5.0)
+  .to(calls,{opacity:1,duration:.4,stagger:.4},5.4);
+calls.forEach((c,i)=>htl.to($$('.d',c),{strokeDashoffset:0,fillOpacity:1,duration:.8,stagger:.08},5.4+i*.4));
+htl.to({},{duration:1},7.0);
+htl.eventCallback('onUpdate', apply);
+
+/* Interactive Click-to-Explode Toggle for 3D Modular Kitchen */
+let isExploded = false;
+let clickTween = null;
+function toggleKitchenExplode(){
+  isExploded = !isExploded;
+  const targetT = isExploded ? 1 : 0;
+  if(clickTween) clickTween.kill();
+  clickTween = gsap.to(proxy, {
+    t: targetT,
+    duration: 1.6,
+    ease: 'power3.inOut',
+    onUpdate: apply,
+    onComplete: () => {
+      $('#stageName').textContent = isExploded ? 'Exploded' : 'Assembled';
+    }
+  });
+  gsap.to('.dims', { opacity: isExploded ? 0 : 1, duration: 0.6 });
+  gsap.to('#legend', { opacity: isExploded ? 1 : 0, duration: 0.6 });
+  gsap.to(calls, { opacity: isExploded ? 1 : 0, duration: 0.5, stagger: 0.08 });
+}
+
+if(heroStage){
+  heroStage.style.cursor = 'pointer';
+  heroStage.addEventListener('click', toggleKitchenExplode);
+}
+const cueEl = $('#cue');
+if(cueEl){
+  cueEl.style.cursor = 'pointer';
+  cueEl.addEventListener('click', toggleKitchenExplode);
+}
+const stageTagEl = $('#stageTag');
+if(stageTagEl){
+  stageTagEl.style.cursor = 'pointer';
+  stageTagEl.addEventListener('click', toggleKitchenExplode);
+}
+gsap.to('#gridBg',{backgroundPosition:'0px -420px, 0px 0px, 0px -420px, 0px 0px',ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'+=270%',scrub:true}});
+
+/* 3D Scroll Reveal for Project Rows */
+rows.forEach((r)=>{
+  const s=$('svg',r);
+  if(s){
+    const t=drawIn(s,{duration:1.2,tl:{paused:true}});
+    ScrollTrigger.create({trigger:r,start:'top 90%',once:true,onEnter:()=>t.play()});
+  }
+  
+  // 3D perspective flip entrance
+  gsap.from(r,{
+    scrollTrigger:{trigger:r,start:'top 88%',once:true},
+    opacity:0,
+    y:50,
+    rotateX:16,
+    transformPerspective:1000,
+    duration:0.85,
+    ease:'power3.out'
+  });
+  
+  ScrollTrigger.create({trigger:r,start:'top 58%',end:'bottom 42%',toggleClass:{targets:r,className:'act'}});
+});
+
+/* 3D Scroll Reveal for Experience Cards */
+$$('.exp-card').forEach((card, idx)=>{
+  gsap.from(card,{
+    scrollTrigger:{trigger:card,start:'top 85%',once:true},
+    opacity:0,
+    y:45,
+    rotateX:14,
+    transformPerspective:1000,
+    duration:0.85,
+    ease:'power3.out',
+    delay:idx*0.1
+  });
+});
+
+/* marquees react to scroll speed with subtle 3D skew */
+(function(){
+  const m1=$('#marq1'),m2=$('#marq2');let o1=0,o2=0,last=window.scrollY,vel=0;
+  gsap.ticker.add(()=>{
+    const y=window.scrollY;vel+=((y-last)-vel)*.12;last=y;
+    const sp=.8+Math.min(Math.abs(vel),60)*.4,h1=m1.scrollWidth/2,h2=m2.scrollWidth/2;
+    o1-=sp;o2+=sp;o1=-((((-o1)%h1)+h1)%h1);o2=(((o2%h2)+h2)%h2)-h2;
+    const sk=Math.max(-8,Math.min(8,-vel*.12));
+    m1.style.transform='translate3d('+o1.toFixed(1)+'px,0,0) skewX('+sk.toFixed(2)+'deg)';
+    m2.style.transform='translate3d('+o2.toFixed(1)+'px,0,0) skewX('+sk.toFixed(2)+'deg)';
+  });
+})();
+
+/* counters */
+$$('[data-n]').forEach(s=>{const n=+s.dataset.n,d=+(s.dataset.d||0),o={v:0};
+  ScrollTrigger.create({trigger:'#stats',start:'top 88%',once:true,onEnter:()=>gsap.to(o,{v:n,duration:1.9,ease:'power2.out',
+    onUpdate:()=>{s.textContent=d?o.v.toFixed(d):Math.round(o.v).toLocaleString('en-US');}})});});
+
+/* physical ink stamping animation on scroll */
+gsap.set('#stamp', { opacity: 0, scale: 3.5, rotate: -32, filter: 'blur(6px)' });
+gsap.set('.stamp-shockwave', { opacity: 0, scale: 1 });
+gsap.from('#cth',{yPercent:25,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:'#contact',start:'top 80%',once:true}});
+
+ScrollTrigger.create({
+  trigger:'#contact',
+  start:'top 55%',
+  onEnter:()=>{
+    const tl = gsap.timeline();
+    // 1. Slam down hard with gravity acceleration
+    tl.to('#stamp', {
+      scale: 1,
+      rotate: -9,
+      filter: 'blur(0px)',
+      opacity: 1,
+      duration: 0.32,
+      ease: 'power4.in'
+    })
+    // 2. Shockwave expansion
+    .to('.stamp-shockwave', {
+      scale: 1.6,
+      opacity: 0.85,
+      duration: 0.05
+    }, '-=0.04')
+    .to('.stamp-shockwave', {
+      scale: 2.2,
+      opacity: 0,
+      duration: 0.45,
+      ease: 'power2.out'
+    })
+    // 3. Stamp recoil rebound
+    .to('#stamp', {
+      scale: 1.08,
+      duration: 0.08,
+      ease: 'power1.out'
+    }, '-=0.45')
+    .to('#stamp', {
+      scale: 0.98,
+      duration: 0.08,
+      ease: 'power1.inOut'
+    })
+    .to('#stamp', {
+      scale: 1,
+      duration: 0.12,
+      ease: 'power2.out'
+    })
+    // 4. Subtle physical thump vibration on the contact heading
+    .fromTo('#cth', { x: -3, y: 3 }, { x: 0, y: 0, duration: 0.25, ease: 'elastic.out(1, 0.3)' }, '-=0.3');
+  },
+  onLeaveBack:()=>{
+    gsap.set('#stamp', { opacity: 0, scale: 3.5, rotate: -32, filter: 'blur(6px)' });
+    gsap.set('.stamp-shockwave', { opacity: 0, scale: 1 });
+  }
+});
+
+/* HUD + ruler rail */
+sheets.forEach((s,i)=>{const tr=s.closest('.pin-spacer')||s;
+  ScrollTrigger.create({trigger:tr,start:'top 55%',end:'bottom 55%',onToggle:self=>{if(self.isActive)setHud(i);}});});
+setHud(0);
+const fill=$('#railFill'),mark=$('#railMark'),pct=$('#railPct');
+ScrollTrigger.create({start:0,end:'max',onUpdate:s=>{const p=s.progress;fill.style.height=(p*100)+'%';mark.style.top=(p*100)+'%';pct.textContent=Math.round(p*100);}});
+
+/* nav smooth scrolling */
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const id=a.getAttribute('href'),t=$(id);if(!t)return;e.preventDefault();
+  let y=id==='#top'?0:t.getBoundingClientRect().top+window.scrollY;
+  const st=ScrollTrigger.getAll().find(s=>s.pin&&t.contains(s.trigger));if(st&&id!=='#top')y=st.start;
+  window.scrollTo({top:y,behavior:'smooth'});
+}));
+
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>ScrollTrigger.refresh());
+window.addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
